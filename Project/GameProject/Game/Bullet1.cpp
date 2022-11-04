@@ -26,19 +26,8 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 
 void Bullet1::Update() {
 	//’e‚Ì‘¬‚³
-	const int move_speed = 4;
-	if (m_type == eType_Player_Attack) {
-		m_pos.y -= move_speed;
-	}
-	if (m_type == eType_EnemyBoss_Attack) {
-		m_pos.y += move_speed;
-		m_pos.y = (4,4);
-		//m_pos.y += move_speed;
-	}
-	if (m_type == eType_Enemy_Attack) {
 		m_vec = CVector2D(sin(m_ang), cos(m_ang)) * m_speed;
 		m_pos += m_vec;
-	}
 	if (m_pos.y > 720 || m_pos.y < 0 || m_pos.x < 0 || m_pos.x > 1280) {
 		SetKill();
 	}
@@ -58,12 +47,20 @@ void Bullet1::Collision(Base* b) {
 	case eType_Player:
 
 		//‰~“¯Žm‚Ì”»’èiŽ©•ªA‘ÎÛ‚‚j
-		if (m_type == eType_EnemyBoss_Attack && m_type == eType_Enemy_Attack && Base::CollisionCircle(this, b)) {
+		if (m_type == eType_EnemyBoss_Attack && Base::CollisionCircle(this, b)) {
 			//SOUND("SE_Hit")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
 			GameData::s_score -= 200;
 		}
+
+		if (m_type == eType_Enemy_Attack && Base::CollisionCircle(this, b)) {
+			//SOUND("SE_Hit")->Play();
+			SetKill();
+			Base::Add(new Effect(b->m_pos));
+			GameData::s_score -= 25;
+		}
+
 		break;
 
 	case eType_EnemyBoss:
@@ -89,7 +86,7 @@ void Bullet1::Collision(Base* b) {
 			GameData::s_score += 50;
 		}
 		break;
-
+		
 	}
 
 }

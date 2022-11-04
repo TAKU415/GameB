@@ -3,6 +3,7 @@
 
 Player::Player(const CVector2D& pos) : Base(eType_Player) {
 	m_img.Load("Image/Player.png");
+	m_pos = pos;
 	//”¼ŒaÝ’è
 	m_rad = 12;
 	//•\Ž¦ƒTƒCƒY
@@ -34,7 +35,7 @@ void Player::Update() {
 	m_ang = atan2(vec.x, vec.y);
 	
 	//’e
-	if (PUSH(CInput::eMouseL)) {
+	if (HOLD(CInput::eMouseL)) {
 		if (m_cnt >= 30) {
 			//SOUND("SE_Hit01")->Play();
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang, 4));

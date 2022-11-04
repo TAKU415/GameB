@@ -66,9 +66,10 @@ void Init(void)
 	ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/Enemy.png"));
 	ADD_RESOURCE("EnemyMob", CImage::CreateImage("Image/EnemyMob.png"));
 	ADD_RESOURCE("Effect_Bomb", CImage::CreateImage("Image/Effect_Bomb.png"));
-	ADD_RESOURCE("Bullet1", CImage::CreateImage("Image/Bullet.png"));
-	ADD_RESOURCE("Bullet1", CImage::CreateImage("Image/Bullet2.png"));
+	ADD_RESOURCE("Bullet", CImage::CreateImage("Image/Bullet.png"));
+	ADD_RESOURCE("Bullet2", CImage::CreateImage("Image/Bullet2.png"));
 	ADD_RESOURCE("UI", CImage::CreateImage("Image/UI.png"));
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 
 	Base::Add(new Title());
 

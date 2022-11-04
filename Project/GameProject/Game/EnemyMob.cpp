@@ -15,7 +15,7 @@ EnemyMob::EnemyMob(const CVector2D& pos) : Base(eType_EnemyMob) {
 void EnemyMob::Update() {
 	m_cnt++;
 		if (m_cnt >= 60) {
-			m_pos.y += 3;
+			m_pos.y += 100;
 			m_cnt = 0;
 		}
 	if (m_pos.y > 720) {
@@ -27,7 +27,7 @@ void EnemyMob::Update() {
 	if(b){
 		CVector2D vec = b->m_pos - m_pos;
 		m_ang = atan2(vec.x, vec.y);
-		if (m_cnt >= 30) {
+		if (m_cnt >= 35) {
 			//SOUND("SE_Hit01")->Play();
 			Base::Add(new Bullet1(eType_Enemy_Attack, m_pos, m_ang, 4));
 		}
@@ -38,4 +38,8 @@ void EnemyMob::Draw() {
 	m_img.SetPos(m_pos);
 	m_img.SetAng(m_ang);
 	m_img.Draw();
+}
+
+void EnemyMob::Collision(Base* b)
+{
 }
