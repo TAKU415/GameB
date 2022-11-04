@@ -12,7 +12,7 @@ Game::Game() :Base(eType_Scene)
 {
 	m_cnt = 0;
 	Base::Add(new Player(CVector2D(600,600)));
-	Base::Add(new EnemyBoss(CVector2D(640, 100)));
+	Base::Add(new EnemyBoss(CVector2D(640, 300)));
 	Base::Add(new UI());
 }
 

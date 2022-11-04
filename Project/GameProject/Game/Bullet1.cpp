@@ -51,14 +51,14 @@ void Bullet1::Collision(Base* b) {
 			//SOUND("SE_Hit")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score -= 200;
+			GameData::s_score -= 500;
 		}
 
 		if (m_type == eType_Enemy_Attack && Base::CollisionCircle(this, b)) {
 			//SOUND("SE_Hit")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score -= 25;
+			GameData::s_score -= 150;
 		}
 
 		break;
