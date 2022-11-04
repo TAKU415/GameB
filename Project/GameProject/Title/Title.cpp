@@ -15,7 +15,7 @@ Title::~Title()
 void Title::Update()
 {
 	//ボタン１でタイトル破棄
-	if (PUSH(CInput::eButton1)) {
+	if (PUSH(CInput::eButton5)) {
 		m_kill = true;
 	}
 }
@@ -24,6 +24,6 @@ void Title::Draw()
 {
 	m_img.Draw();
 	//文字表示
-	m_title_text.Draw(64, 256, 0, 0, 0, "Title");
-	m_title_text.Draw(64, 512, 0, 0, 0, "Push Z");
+	m_title_text.Draw(780, 256, 255, 255, 255, "シューティング");
+	m_title_text.Draw(800, 512, 255, 255, 255, "Push SPACE");
 }
