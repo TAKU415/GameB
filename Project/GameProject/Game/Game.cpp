@@ -25,8 +25,13 @@ void Game::Update()
 		Base::Add(new EnemyMob(CVector2D(640, 200)));
 		Base::Add(new EnemyMob(CVector2D(200, 200)));
 		m_cnt = 0;
+		//m_is_tuto = tuto;
 	}
 
+	/*if (GameData::s_score >= 500) {
+		m_result_text.Draw(780, 256, 255, 255, 255, "Gameover");
+	}*/
+	
 	if (GameData::s_score >= 5000 || GameData::s_score <= 0) {
 		SetKill();
 	}
@@ -44,4 +49,6 @@ Game::~Game()
 	Base::KillAll();
 	//タイトルシーンへ
 	Base::Add(new Title());
+	//Result::finish_game;
+	//Base::Add(new Result(m_is_tuto));
 }

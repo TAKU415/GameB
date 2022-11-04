@@ -24,6 +24,6 @@ void Title::Draw()
 {
 	m_img.Draw();
 	//文字表示
-	m_title_text.Draw(780, 256, 255, 255, 255, "シューティング");
-	m_title_text.Draw(800, 512, 255, 255, 255, "Push SPACE");
+	
+m_title_text.Draw(780, 256, 255, 255, 255, "シューティング");	m_title_text.Draw(800, 512, 255, 255, 255, "Push SPACE");
 }
