@@ -2,14 +2,14 @@
 #include "Bullet1.h"
 
 EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
-	m_img.Load("Image/Enemy.png");
+	m_img.Load("Image/EnemyBoss.png");
 	m_pos = pos;
 	//半径設定
 	m_rad = 16;
 	//表示サイズ
-	m_img.SetSize(32, 32);
+	m_img.SetSize(32, 41);
 	//画像の中心に設定
-	m_img.SetCenter(16, 16);
+	m_img.SetCenter(16, 20);
 }
 
 void EnemyBoss::Update() {

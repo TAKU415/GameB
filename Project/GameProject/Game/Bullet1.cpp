@@ -6,13 +6,13 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 	: Base(Type)
 {
 	if (Type == eType_Player_Attack) {
-		m_img = COPY_RESOURCE("Bullet", CImage);
+		m_img = COPY_RESOURCE("Bullet2", CImage);
 	}
 	else if(Type == eType_EnemyBoss_Attack) {
-		m_img = COPY_RESOURCE("Bullet2", CImage);
+		m_img = COPY_RESOURCE("Bullet", CImage);
 	}
 	else {
-		m_img = COPY_RESOURCE("Bullet2", CImage);
+		m_img = COPY_RESOURCE("Bullet", CImage);
 	}
 	m_pos = pos;
 	m_ang = ang;
@@ -48,17 +48,17 @@ void Bullet1::Collision(Base* b) {
 
 		//‰~“¯Žm‚Ì”»’èiŽ©•ªA‘ÎÛ‚‚j
 		if (m_type == eType_EnemyBoss_Attack && Base::CollisionCircle(this, b)) {
-			//SOUND("SE_Hit")->Play();
+			SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
 			GameData::s_score -= 500;
 		}
 
 		if (m_type == eType_Enemy_Attack && Base::CollisionCircle(this, b)) {
-			//SOUND("SE_Hit")->Play();
+			SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score -= 150;
+			GameData::s_score -= 50;
 		}
 
 		break;
@@ -67,7 +67,7 @@ void Bullet1::Collision(Base* b) {
 
 		//‰~“¯Žm‚Ì”»’èiŽ©•ªA‘ÎÛ‚‚j
 		if (m_type == eType_Player_Attack && Base::CollisionCircle(this, b)) {
-			//SOUND("SE_Bomb")->Play();
+			SOUND("SE_Bomb")->Play();
 			//b->SetKill();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
@@ -79,7 +79,7 @@ void Bullet1::Collision(Base* b) {
 
 		//‰~“¯Žm‚Ì”»’èiŽ©•ªA‘ÎÛ‚‚j
 		if (m_type == eType_Player_Attack && Base::CollisionCircle(this, b)) {
-			//SOUND("SE_Bomb")->Play();
+			SOUND("SE_Bomb")->Play();
 			b->SetKill();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
