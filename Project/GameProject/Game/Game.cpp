@@ -20,7 +20,7 @@ void Game::Update()
 {
 	//ƒJƒEƒ“ƒg
 	m_cnt++;
-	if (m_cnt >= 180) {
+	if (m_cnt >= 300) {
 		Base::Add(new EnemyMob(CVector2D(1000, 200)));
 		Base::Add(new EnemyMob(CVector2D(640, 200)));
 		Base::Add(new EnemyMob(CVector2D(200, 200)));

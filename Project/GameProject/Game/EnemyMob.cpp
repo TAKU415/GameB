@@ -15,7 +15,7 @@ EnemyMob::EnemyMob(const CVector2D& pos) : Base(eType_EnemyMob) {
 void EnemyMob::Update() {
 	m_cnt++;
 		if (m_cnt >= 60) {
-			m_pos.y += 100;
+			m_pos.y += 50;
 			m_cnt = 0;
 		}
 	if (m_pos.y > 720) {

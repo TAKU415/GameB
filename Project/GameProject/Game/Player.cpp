@@ -36,12 +36,30 @@ void Player::Update() {
 	
 	//’e
 	if (HOLD(CInput::eMouseL)) {
-		if (m_cnt >= 30) {
+		if (m_cnt >= 4) {
 			//SOUND("SE_Hit01")->Play();
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang, 4));
 			m_cnt = 0;
 		}
 	}
+
+	//Boss‚ðŽæ“¾
+	Base* b = Base::FindObject(eType_EnemyBoss);
+	//’eiBoss‚ª‚¢‚ê‚Îj
+	if (b) {
+		CVector2D vec = b->m_pos - m_pos;
+		m_ang = atan2(vec.x, vec.y);
+		if (m_cnt >= 40) {
+			//SOUND("SE_Hit01")->Play();
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(40), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-40), 4));
+			m_cnt = 0;
+		}
+	}
+
 }
 
 void Player::Draw() {

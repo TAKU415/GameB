@@ -6,13 +6,13 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 	: Base(Type)
 {
 	if (Type == eType_Player_Attack) {
-		m_img = COPY_RESOURCE("Bullet2", CImage);
+		m_img = COPY_RESOURCE("Bullet", CImage);
 	}
 	else if(Type == eType_EnemyBoss_Attack) {
-		m_img = COPY_RESOURCE("Bullet", CImage);
+		m_img = COPY_RESOURCE("Bullet2", CImage);
 	}
 	else {
-		m_img = COPY_RESOURCE("Bullet", CImage);
+		m_img = COPY_RESOURCE("Bullet3", CImage);
 	}
 	m_pos = pos;
 	m_ang = ang;
@@ -51,14 +51,14 @@ void Bullet1::Collision(Base* b) {
 			SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score -= 500;
+			GameData::s_score -= 300;
 		}
 
 		if (m_type == eType_Enemy_Attack && Base::CollisionCircle(this, b)) {
 			SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score -= 50;
+			GameData::s_score -= 100;
 		}
 
 		break;

@@ -5,7 +5,7 @@ EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
 	m_img.Load("Image/EnemyBoss.png");
 	m_pos = pos;
 	//半径設定
-	m_rad = 16;
+	m_rad = 23;
 	//表示サイズ
 	m_img.SetSize(32, 41);
 	//画像の中心に設定
@@ -14,13 +14,14 @@ EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
 
 void EnemyBoss::Update() {
 	m_cnt++;
+
 	//速度
-	const int move_speed = 50;
+	const int move_speed = 2;
 	//右
-	if (m_pos.x <= 200)
+	if (m_pos.x > 200 && HOLD(CInput::eLeft))
 		m_pos.x += move_speed;
 	//左
-	if (m_pos.x >= 1080)
+	if (m_pos.x < 1080 && HOLD(CInput::eRight))
 		m_pos.x -= move_speed;
 	
 	//弾
