@@ -24,5 +24,4 @@ void UI::Draw() {
 		m_img.SetPos(500 - 24 * i, 0);
 		m_img.Draw();
 	}
-
 }

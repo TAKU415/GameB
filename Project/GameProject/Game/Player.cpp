@@ -36,7 +36,7 @@ void Player::Update() {
 	m_ang = atan2(vec.x, vec.y);
 	
 	//’e
-	if (HOLD(CInput::eMouseL) && GameData::s_score <= 2000) {
+	if (HOLD(CInput::eMouseL) && GameData::s_score <= 100) {
 		if (m_cnt >= 4) {
 			//SOUND("SE_Hit01")->Play();
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang, 4));

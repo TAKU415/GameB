@@ -10,5 +10,4 @@ public:
 	Game();
 	~Game();
 	void Update();
-	//bool m_is_tuto;
 };

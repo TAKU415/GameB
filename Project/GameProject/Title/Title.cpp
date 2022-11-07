@@ -30,4 +30,7 @@ void Title::Draw()
 	
 m_title_text.Draw(780, 256, 255, 255, 255, "シューティング");
 m_title_text.Draw(800, 512, 255, 255, 255, "Push SPACE");
+m_title_text.Draw(0, 656, 255, 255, 255, "青:敵攻撃");
+m_title_text.Draw(0, 606, 255, 255, 255, "赤:Player攻撃");
+m_title_text.Draw(0, 556, 255, 255, 255, "＠＠");
 }
