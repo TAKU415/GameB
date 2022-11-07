@@ -65,6 +65,7 @@ void Init(void)
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player.png"));
 	ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/EnemyBoss.png"));
 	ADD_RESOURCE("EnemyMob", CImage::CreateImage("Image/EnemyMob.png"));
+	ADD_RESOURCE("NPC", CImage::CreateImage("Image/Boss.png"));
 	ADD_RESOURCE("Effect_Bomb", CImage::CreateImage("Image/Effect_Bomb.png"));
 	ADD_RESOURCE("Bullet", CImage::CreateImage("Image/Bullet.png"));
 	ADD_RESOURCE("Bullet2", CImage::CreateImage("Image/Bullet2.png"));

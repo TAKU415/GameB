@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "EnemyBoss.h"
 #include "EnemyMob.h"
+//#include "NPC.h"
 #include "Effect.h"
 #include "GameData.h"
 #include "UI.h"
@@ -13,6 +14,7 @@ Game::Game() :Base(eType_Scene)
 	m_cnt = 0;
 	Base::Add(new Player(CVector2D(600,600)));
 	Base::Add(new EnemyBoss(CVector2D(640, 300)));
+	//Base::Add(new NPC(CVector2D(1180, 620)));
 	Base::Add(new UI());
 }
 
@@ -32,7 +34,7 @@ void Game::Update()
 		m_result_text.Draw(780, 256, 255, 255, 255, "Gameover");
 	}*/
 	
-	if (GameData::s_score >= 5000 || GameData::s_score <= 0) {
+	if (GameData::s_score1 <= 0 || GameData::s_score <= 0) {
 		SetKill();
 	}
 
