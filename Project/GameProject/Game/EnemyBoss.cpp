@@ -2,7 +2,7 @@
 #include "Bullet1.h"
 
 EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
-	m_img.Load("Image/EnemyBoss.png");
+	m_img.Load("Image/Boss.png");
 	m_pos = pos;
 	//îºåaê›íË
 	m_rad = 23;

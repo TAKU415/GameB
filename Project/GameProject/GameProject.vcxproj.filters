@@ -32,9 +32,6 @@
     <ClCompile Include="Game\EnemyMob.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Game\NPC.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -76,9 +73,6 @@
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Game\EnemyMob.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\NPC.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
