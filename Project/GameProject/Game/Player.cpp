@@ -36,10 +36,21 @@ void Player::Update() {
 	m_ang = atan2(vec.x, vec.y);
 	
 	//’e
-	if (HOLD(CInput::eMouseL) && GameData::s_score <= 100) {
-		if (m_cnt >= 4) {
+	if (HOLD(CInput::eMouseL)) {
+		if (m_cnt >= 180) {
 			//SOUND("SE_Hit01")->Play();
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang, 4));
+			//if (m_pos.y > +100 || m_pos.y < 0 || m_pos.x < 0 || m_pos.x > +100) {
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(4), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(3), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(2), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(1), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-1), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-2), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-3), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-4), 4));
+			//	SetKill();
+			//}
 			m_cnt = 0;
 		}
 	}
@@ -53,7 +64,7 @@ void Player::Update() {
 		if (m_cnt >= 40) {
 			//SOUND("SE_Hit01")->Play();
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(40), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
+			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(20), 4));
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-40), 4));
