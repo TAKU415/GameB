@@ -9,13 +9,14 @@
 #include "UI.h"
 #include "../Title/Title.h"
 
-Game1::Game1() :Base(eType_Scene)
+Game1::Game1(bool tuto) :Base(eType_Scene)
 {
 	m_cnt = 0;
 	Base::Add(new Player(CVector2D(600, 600)));
 	Base::Add(new EnemyBoss(CVector2D(640, 300)));
 	//Base::Add(new NPC(CVector2D(1180, 620)));
 	Base::Add(new UI());
+	m_is_tuto = tuto;
 }
 
 void Game1::Update()
@@ -47,6 +48,7 @@ void Game1::Update()
 Game1::~Game1()
 {
 	GameData::s_score = 300;
+	GameData::s_score1 = 5000;
 	//全てのオブジェクトを破棄
 	Base::KillAll();
 	//タイトルシーンへ

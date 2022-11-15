@@ -93,7 +93,6 @@ void Bullet1::Collision(Base* b) {
 			b->SetKill();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			//GameData::s_score1 -= 50;
 		}
 		break;
 		

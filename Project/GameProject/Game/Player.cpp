@@ -4,17 +4,21 @@
 
 Player::Player(const CVector2D& pos) : Base(eType_Player) {
 	m_img.Load("Image/Player.png");
-	m_pos = pos;
+	/*m_pos_old = */ m_pos = pos;
 	//半径設定
 	m_rad = 12;
 	//表示サイズ
 	m_img.SetSize(32, 50);
+	//m_img.SetSize(64, 100);
 	//画像の中心に設定
 	m_img.SetCenter(16, 25);
+	//m_img.SetCenter(32, 50);
 }
 
 void Player::Update() {
+	//m_pos_old = m_pos;
 	m_cnt++;
+	m_cnt1++;
 	//速度
 	const int move_speed = 4;
 	//右
@@ -37,7 +41,7 @@ void Player::Update() {
 	
 	//弾
 	if (HOLD(CInput::eMouseL)) {
-		if (m_cnt >= 180) {
+		if (m_cnt1 >= 180) {
 			//SOUND("SE_Hit01")->Play();
 			//if (m_pos.y > +100 || m_pos.y < 0 || m_pos.x < 0 || m_pos.x > +100) {
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(4), 4));
@@ -51,7 +55,7 @@ void Player::Update() {
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-4), 4));
 			//	SetKill();
 			//}
-			m_cnt = 0;
+			m_cnt1 = 0;
 		}
 	}
 
@@ -63,11 +67,11 @@ void Player::Update() {
 		m_ang = atan2(vec.x, vec.y);
 		if (m_cnt >= 40) {
 			//SOUND("SE_Hit01")->Play();
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(40), 4));
+			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(40), 4));
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(20), 4));
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-40), 4));
+			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-40), 4));
 			m_cnt = 0;
 		}
 	}
@@ -80,7 +84,7 @@ void Player::Draw() {
 }
 
 void Player::Collision(Base* b) {
-	/*if (Base::CollisionCircle(this, b)) {
-		m_pos = m_pos_old;
-	}*/
+	if (Base::CollisionCircle(this, b)) {
+		//m_pos = m_pos_old;
+	}
 }

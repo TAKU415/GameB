@@ -7,7 +7,8 @@ public:
 	int m_cnt;
 	CFont m_result_text;
 public:
-	Game1();
+	Game1(bool tuto);
 	~Game1();
 	void Update();
+	bool m_is_tuto;
 };

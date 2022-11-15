@@ -7,6 +7,7 @@ m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
 	m_img = COPY_RESOURCE("Title",CImage);
 	m_img.SetSize(1280,720);
+	title_flag = false;
 }
 
 Title::~Title()
@@ -18,21 +19,24 @@ Title::~Title()
 void Title::Update()
 {
 	if (title_flag) {
-		//ボタン5(SPACE)でタイトル破棄
-		if (PUSH(CInput::eButton5)) {
+		//ボタン2(X)でタイトル破棄
+		if (PUSH(CInput::eButton2)) {
 			//m_kill = true;
 			SetKill();
 			Base::KillAll();
-			Base::Add(new Game());
+			Base::Add(new Game(true));
 		}
 
-		//ボタン5(SPACE)でタイトル破棄
-		//if (PUSH(CInput::eButton1)) {
-		//	//m_kill = true;
-		//	SetKill();
-		//	Base::KillAll();
-		//	Base::Add(new Game1(true));
-		//}
+		//ボタン1(Z)でタイトル破棄
+		if (PUSH(CInput::eButton1)) {
+			//m_kill = true;
+			SetKill();
+			Base::KillAll();
+			Base::Add(new Game1(true));
+		}
+	}
+	else {
+		title_flag = true;
 	}
 
 }
@@ -42,6 +46,7 @@ void Title::Draw()
 	m_img.Draw();
 	//文字表示
 	
-m_title_text.Draw(780, 256, 255, 255, 255, "シューティング");
-m_title_text.Draw(800, 512, 255, 255, 255, "Push SPACE");
+m_title_text.Draw(780, 256, 255, 255, 255, "タイトル");
+m_title_text.Draw(800, 512, 255, 255, 255, "Push X Head");
+m_title_text.Draw(800, 452, 255, 255, 255, "Push Z Easy");
 }
