@@ -1,5 +1,6 @@
 #include "EnemyBoss.h"
 #include "Bullet1.h"
+#include "GameData.h"
 
 EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
 	m_img.Load("Image/EnemyBoss1.png");
@@ -13,6 +14,12 @@ EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
 }
 
 void EnemyBoss::Update() {
+	//m_cnt1++;
+	//if (GameData::s_score1 <= 2500) {
+	//	if(m_cnt1 <= 60)
+	//	GameData::s_score = 600;
+	//}
+
 	m_cnt++;
 
 	//‘¬“x

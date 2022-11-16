@@ -47,6 +47,6 @@ void Title::Draw()
 	//文字表示
 	
 m_title_text.Draw(780, 256, 255, 255, 255, "タイトル");
-m_title_text.Draw(800, 512, 255, 255, 255, "Push X Head");
-m_title_text.Draw(800, 452, 255, 255, 255, "Push Z Easy");
+m_title_text.Draw(650, 512, 255, 255, 255, "Push X Main(Hard)");
+m_title_text.Draw(650, 452, 255, 255, 255, "Push Z Tutorial");
 }

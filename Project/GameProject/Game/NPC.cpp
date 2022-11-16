@@ -2,7 +2,7 @@
 #include "Bullet1.h"
 
 NPC::NPC(const CVector2D& pos) : Base(eType_NPC) {
-	m_img.Load("Image/Boss.png");
+	m_img.Load("Image/Enemy.png");
 	m_pos = pos;
 	//半径設定
 	m_rad = 16;
@@ -25,12 +25,13 @@ void NPC::Update() {
 	Base* b = Base::FindObject(eType_Player);
 	//弾（プレイヤーがいれば）
 	if (b) {
-		CVector2D vec = b->m_pos - m_pos;
-		m_ang = atan2(vec.x, vec.y);
-		if (m_cnt >= 60) {
-			//SOUND("SE_Hit01")->Play();
-			Base::Add(new Bullet1(eType_NPC_Attack, m_pos, m_ang, 4));
-		}
+			CVector2D vec = b->m_pos - m_pos;
+			m_ang = atan2(vec.x, vec.y);
+			if (m_cnt >= 180) {
+				//SOUND("SE_Hit01")->Play();
+				Base::Add(new Bullet1(eType_EnemyNPC_Attack, m_pos, m_ang, 4));
+				m_cnt == 0;
+			}
 	}
 }
 

@@ -11,7 +11,7 @@ enum {
 	eType_Player_Attack,
 	eType_Enemy_Attack,
 	eType_EnemyBoss_Attack,
-	eType_NPC_Attack,
+	eType_EnemyNPC_Attack,
 	eType_Effect,
 	eType_UI,
 	eType_Scene,

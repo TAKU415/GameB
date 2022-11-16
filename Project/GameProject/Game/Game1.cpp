@@ -2,7 +2,7 @@
 #include "Bullet1.h"
 #include "Player.h"
 #include "EnemyBoss.h"
-//#include "EnemyMob.h"
+#include "EnemyMob.h"
 //#include "NPC.h"
 #include "Effect.h"
 #include "GameData.h"
@@ -25,7 +25,7 @@ void Game1::Update()
 	m_cnt++;
 	if (m_cnt >= 300) {
 		//Base::Add(new EnemyMob(CVector2D(1000, 200)));
-		//Base::Add(new EnemyMob(CVector2D(640, 200)));
+		Base::Add(new EnemyMob(CVector2D(640, 200)));
 		//Base::Add(new EnemyMob(CVector2D(200, 200)));
 		m_cnt = 0;
 		//m_is_tuto = tuto;
@@ -35,7 +35,7 @@ void Game1::Update()
 		m_result_text.Draw(780, 256, 255, 255, 255, "Gameover");
 	}*/
 
-	if (GameData::s_score1 <= 0 || GameData::s_score <= 0) {
+	if (GameData::s_score1 <= 300 || GameData::s_score <= 0) {
 		SetKill();
 	}
 
@@ -48,7 +48,7 @@ void Game1::Update()
 Game1::~Game1()
 {
 	GameData::s_score = 300;
-	GameData::s_score1 = 5000;
+	GameData::s_score1 = 5300;
 	//全てのオブジェクトを破棄
 	Base::KillAll();
 	//タイトルシーンへ

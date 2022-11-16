@@ -5,6 +5,7 @@ class EnemyBoss : public Base {
 private:
 	int m_state;
 	int m_cnt;
+	int m_cnt1;
 	float m_ang;
 	CImage m_img;
 	//ƒ_ƒ[ƒW”Ô†
