@@ -8,11 +8,11 @@ Player::Player(const CVector2D& pos) : Base(eType_Player) {
 	//半径設定
 	m_rad = 12;
 	//表示サイズ
-	m_img.SetSize(32, 50);
-	//m_img.SetSize(64, 100);
+	//m_img.SetSize(32, 50);
+	m_img.SetSize(50, 70);
 	//画像の中心に設定
-	m_img.SetCenter(16, 25);
-	//m_img.SetCenter(32, 50);
+	//m_img.SetCenter(16, 25);
+	m_img.SetCenter(25, 35);
 }
 
 void Player::Update() {
@@ -68,9 +68,9 @@ void Player::Update() {
 		if (m_cnt >= 40) {
 			//SOUND("SE_Hit01")->Play();
 			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(40), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(20), 4));
+			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(20), 4));
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
+			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
 			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-40), 4));
 			m_cnt = 0;
 		}

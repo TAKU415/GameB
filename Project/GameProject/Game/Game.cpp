@@ -3,17 +3,22 @@
 #include "Player.h"
 #include "EnemyBoss.h"
 #include "EnemyMob.h"
-//#include "NPC.h"
+#include "kuma.h"
 #include "Effect.h"
 #include "GameData.h"
+#include "Field.h"
 #include "UI.h"
 #include "../Title/Title.h"
 
 Game::Game(bool tuto) :Base(eType_Scene)
 {
 	m_cnt = 0;
+	Base::Add(new Field());
 	Base::Add(new Player(CVector2D(600,600)));
 	Base::Add(new EnemyBoss(CVector2D(640, 300)));
+	Base::Add(new kuma(CVector2D(240, 130)));
+	Base::Add(new kuma(CVector2D(640, 80)));
+	Base::Add(new kuma(CVector2D(1040, 130)));
 	Base::Add(new UI());
 	m_is_tuto = tuto;
 }
@@ -24,7 +29,7 @@ void Game::Update()
 	m_cnt++;
 	if (m_cnt >= 300) {
 		Base::Add(new EnemyMob(CVector2D(1000, 200)));
-		Base::Add(new EnemyMob(CVector2D(640, 200)));
+		//Base::Add(new EnemyMob(CVector2D(640, 200)));
 		Base::Add(new EnemyMob(CVector2D(200, 200)));
 		m_cnt = 0;
 		//m_is_tuto = tuto;

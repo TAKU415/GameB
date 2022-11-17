@@ -11,7 +11,7 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 	else if(Type == eType_EnemyBoss_Attack) {
 		m_img = COPY_RESOURCE("Bullet2", CImage);
 	}
-	else if (Type == eType_EnemyNPC_Attack) {
+	else if (Type == eType_kuma_Attack) {
 		m_img = COPY_RESOURCE("Bullet3", CImage);
 	}
 	else {
@@ -64,11 +64,11 @@ void Bullet1::Collision(Base* b) {
 			GameData::s_score -= 5;
 		}
 
-		if (m_type == eType_EnemyNPC_Attack && Base::CollisionCircle(this, b)) {
+		if (m_type == eType_kuma_Attack && Base::CollisionCircle(this, b)) {
 			//SOUND("SE_Bomb")->Play();
 			SetKill();
-			//Base::Add(new Effect(b->m_pos));
-			GameData::s_score += 200;
+			Base::Add(new Effect(b->m_pos));
+			GameData::s_score -= 50;
 		}
 
 		break;

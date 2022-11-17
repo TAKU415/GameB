@@ -16,9 +16,11 @@
     <ClCompile Include="Game\Effect.cpp" />
     <ClCompile Include="Game\EnemyBoss.cpp" />
     <ClCompile Include="Game\EnemyMob.cpp" />
+    <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Game\Game1.cpp" />
     <ClCompile Include="Game\GameData.cpp" />
+    <ClCompile Include="Game\kuma.cpp" />
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Game\UI.cpp" />
     <ClCompile Include="main.cpp" />
@@ -30,9 +32,11 @@
     <ClInclude Include="Game\Effect.h" />
     <ClInclude Include="Game\EnemyBoss.h" />
     <ClInclude Include="Game\EnemyMob.h" />
+    <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Game\Game1.h" />
     <ClInclude Include="Game\GameData.h" />
+    <ClInclude Include="Game\kuma.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Game\UI.h" />
     <ClInclude Include="Title\Title.h" />

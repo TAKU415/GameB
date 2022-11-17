@@ -6,12 +6,14 @@
 //#include "NPC.h"
 #include "Effect.h"
 #include "GameData.h"
+#include "Field.h"
 #include "UI.h"
 #include "../Title/Title.h"
 
 Game1::Game1(bool tuto) :Base(eType_Scene)
 {
 	m_cnt = 0;
+	Base::Add(new Field());
 	Base::Add(new Player(CVector2D(600, 600)));
 	Base::Add(new EnemyBoss(CVector2D(640, 300)));
 	//Base::Add(new NPC(CVector2D(1180, 620)));
@@ -24,9 +26,9 @@ void Game1::Update()
 	//ƒJƒEƒ“ƒg
 	m_cnt++;
 	if (m_cnt >= 300) {
-		//Base::Add(new EnemyMob(CVector2D(1000, 200)));
-		Base::Add(new EnemyMob(CVector2D(640, 200)));
-		//Base::Add(new EnemyMob(CVector2D(200, 200)));
+		Base::Add(new EnemyMob(CVector2D(1000, 200)));
+		//Base::Add(new EnemyMob(CVector2D(640, 200)));
+		Base::Add(new EnemyMob(CVector2D(200, 200)));
 		m_cnt = 0;
 		//m_is_tuto = tuto;
 	}
