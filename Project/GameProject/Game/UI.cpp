@@ -34,8 +34,8 @@ void UI::Draw() {
 				m_text.Draw(0, 720 - (32 * 3), 255, 255, 255, "W:上移動");
 				m_text.Draw(0, 720 - (32 * 2), 255, 255, 255, "S:下移動");
 				m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左:攻撃");
-				if (GameData::s_score1 <= 300) {
-					m_text.Draw(0, 720 - (32 * 7), 255, 255, 255, "THANK YOU");
+				if (GameData::s_score1 <= 500) {
+					m_text.Draw(0, 720 - (32 * 7), 255, 255, 255, "「THANK YOU」");
 				}
 			}
 		}

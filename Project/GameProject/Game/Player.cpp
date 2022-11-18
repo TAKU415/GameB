@@ -41,7 +41,7 @@ void Player::Update() {
 	
 	//’e
 	if (HOLD(CInput::eMouseL)) {
-		if (m_cnt1 >= 180) {
+		if (m_cnt1 >= 120) {
 			//SOUND("SE_Hit01")->Play();
 			//if (m_pos.y > +100 || m_pos.y < 0 || m_pos.x < 0 || m_pos.x > +100) {
 			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(4), 4));
@@ -65,7 +65,7 @@ void Player::Update() {
 	if (b) {
 		CVector2D vec = b->m_pos - m_pos;
 		m_ang = atan2(vec.x, vec.y);
-		if (m_cnt >= 40) {
+		if (m_cnt >= 20) {
 			//SOUND("SE_Hit01")->Play();
 			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(40), 4));
 			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(20), 4));
