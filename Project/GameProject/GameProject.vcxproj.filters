@@ -41,6 +41,9 @@
     <ClCompile Include="Game\kuma.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Title\Result.cpp">
+      <Filter>Title</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -92,6 +95,9 @@
     </ClInclude>
     <ClInclude Include="Game\kuma.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Title\Result.h">
+      <Filter>Title</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

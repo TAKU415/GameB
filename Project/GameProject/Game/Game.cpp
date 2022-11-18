@@ -8,7 +8,7 @@
 #include "GameData.h"
 #include "Field.h"
 #include "UI.h"
-#include "../Title/Title.h"
+#include "../Title/Result.h"
 
 Game::Game(bool tuto) :Base(eType_Scene)
 {
@@ -29,7 +29,7 @@ void Game::Update()
 	m_cnt++;
 	if (m_cnt >= 300) {
 		Base::Add(new EnemyMob(CVector2D(1000, 200)));
-		//Base::Add(new EnemyMob(CVector2D(640, 200)));
+		Base::Add(new EnemyMob(CVector2D(640, 200)));
 		Base::Add(new EnemyMob(CVector2D(200, 200)));
 		m_cnt = 0;
 		//m_is_tuto = tuto;
@@ -56,12 +56,13 @@ void Game::Update()
 
 Game::~Game()
 {
-	GameData::s_score = 300;
-	GameData::s_score1 = 5300;
+	//GameData::s_score = 300;
+	//GameData::s_score1 = 5300;
 	//全てのオブジェクトを破棄
 	Base::KillAll();
 	//タイトルシーンへ
-	Base::Add(new Title());
-	//Result::finish_game;
-	//Base::Add(new Result(m_is_tuto));
+	//Base::Add(new Title());
+	//リザルト画面へ
+	Result::finish_game = 2;
+	Base::Add(new Result(m_is_tuto));
 }

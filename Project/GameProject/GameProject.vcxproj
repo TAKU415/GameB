@@ -24,6 +24,7 @@
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Game\UI.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Title\Result.cpp" />
     <ClCompile Include="Title\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +40,7 @@
     <ClInclude Include="Game\kuma.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Game\UI.h" />
+    <ClInclude Include="Title\Result.h" />
     <ClInclude Include="Title\Title.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
