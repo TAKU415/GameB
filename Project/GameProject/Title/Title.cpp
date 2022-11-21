@@ -46,7 +46,7 @@ void Title::Draw()
 	m_img.Draw();
 	//•¶Žš•\Ž¦
 	
-m_title_text.Draw(780, 256, 255, 255, 255, "ˆ«‹Y(‚ ‚»‚Ñ)");
-m_title_text.Draw(650, 512, 255, 255, 255, "Push X Main(Hard)");
-m_title_text.Draw(650, 452, 255, 255, 255, "Push Z Tutorial");
+m_title_text.Draw(780, 256, 255, 0, 0, "Title(–¢’è)");
+//m_title_text.Draw(650, 512, 255, 0, 0, "Push X Main(Hard)");
+//m_title_text.Draw(650, 452, 255, 0, 0, "Push Z Tutorial");
 }
