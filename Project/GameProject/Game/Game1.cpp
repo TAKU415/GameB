@@ -16,7 +16,7 @@ Game1::Game1(bool tuto) :Base(eType_Scene)
 	Base::Add(new Field());
 	
 	Base::Add(new Player(CVector2D(600, 600)));
-	Base::Add(new EnemyBoss(CVector2D(640, 300)));
+	Base::Add(new EnemyBoss(CVector2D(640, 100)));
 	//Base::Add(new NPC(CVector2D(1180, 620)));
 	Base::Add(new UI());
 	m_is_tuto = tuto;
