@@ -2,7 +2,7 @@
 
 Field::Field() :Base(eType_Field)
 {
-	m_img = COPY_RESOURCE("Field", CImage);
+	m_img = COPY_RESOURCE("Field2", CImage);
 	//m_sky = COPY_RESOURCE("Sky", CImage);
 	//m_town = COPY_RESOURCE("Town", CImage);
 	//m_foreground = COPY_RESOURCE("ForeGround", CImage);

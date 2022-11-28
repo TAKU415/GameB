@@ -76,6 +76,7 @@ void Init(void)
 	ADD_RESOURCE("Clear", CImage::CreateImage("Image/Clear.png"));
 	ADD_RESOURCE("Perfect", CImage::CreateImage("Image/Perfect.png"));
 	ADD_RESOURCE("Field", CImage::CreateImage("Image/BackGround.png"));
+	ADD_RESOURCE("Field2", CImage::CreateImage("Image/BackGround2.png"));
 	ADD_RESOURCE("kuma", CImage::CreateImage("Image/kuma.png"));
 
 	SOUND("SE_Bomb")->Load("Sound/SE/SE_Bomb.wav", 10);
