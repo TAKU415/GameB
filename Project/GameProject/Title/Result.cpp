@@ -34,6 +34,7 @@ void Result::Update() {
 
 void Result::Draw() {
 	m_img.SetSize(1280, 720);
+	//m_img.SetSize(1920, 1080);
 	m_img.Draw();
 	//m_result_text.Draw(100, 700, 255, 0, 0, "マウス左クリック：終了");
 	if (GameData::s_score <= 0 && GameData::s_score1 > 300) {

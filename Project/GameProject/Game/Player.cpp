@@ -33,12 +33,12 @@ void Player::Update() {
 	//‰º
 	if (HOLD(CInput::eDown))
 		m_pos.y += move_speed;
-	
+
 	//ƒ}ƒEƒX‚ÌƒxƒNƒgƒ‹
 	CVector2D vec = CInput::GetMousePoint() - m_pos;
 	//‰ñ“]’l‚ð‹tŽZ
 	m_ang = atan2(vec.x, vec.y);
-	
+
 	//’e
 	if (HOLD(CInput::eMouseL)) {
 		if (m_cnt1 >= 120) {
@@ -65,14 +65,16 @@ void Player::Update() {
 	if (b) {
 		CVector2D vec = b->m_pos - m_pos;
 		m_ang = atan2(vec.x, vec.y);
-		if (m_cnt >= 20) {
-			//SOUND("SE_Hit01")->Play();
-			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(40), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(20), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
-			//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-40), 4));
-			m_cnt = 0;
+		if (HOLD(CInput::eButton5)) {
+			if (m_cnt >= 20) {
+				//SOUND("SE_Hit01")->Play();
+				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(40), 4));
+				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(20), 4));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
+				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
+				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-40), 4));
+				m_cnt = 0;
+			}
 		}
 	}
 

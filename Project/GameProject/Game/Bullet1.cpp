@@ -51,14 +51,14 @@ void Bullet1::Collision(Base* b) {
 
 		//‰~“¯Žm‚Ì”»’èiŽ©•ªA‘ÎÛ‚‚j
 		if (m_type == eType_EnemyBoss_Attack && Base::CollisionCircle(this, b)) {
-			SOUND("SE_Bomb")->Play();
+			//SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
 			GameData::s_score -= 100;
 		}
 
 		if (m_type == eType_Enemy_Attack && Base::CollisionCircle(this, b)) {
-			SOUND("SE_Bomb")->Play();
+			//SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
 			GameData::s_score -= 5;
@@ -77,7 +77,7 @@ void Bullet1::Collision(Base* b) {
 
 		//‰~“¯Žm‚Ì”»’èiŽ©•ªA‘ÎÛ‚‚j
 		if (m_type == eType_Player_Attack && Base::CollisionCircle(this, b)) {
-			SOUND("SE_Bomb")->Play();
+			//SOUND("SE_Bomb")->Play();
 			//b->SetKill();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
@@ -89,7 +89,7 @@ void Bullet1::Collision(Base* b) {
 
 		//‰~“¯Žm‚Ì”»’èiŽ©•ªA‘ÎÛ‚‚j
 		if (m_type == eType_Player_Attack && Base::CollisionCircle(this, b)) {
-			SOUND("SE_Bomb")->Play();
+			//SOUND("SE_Bomb")->Play();
 			b->SetKill();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));

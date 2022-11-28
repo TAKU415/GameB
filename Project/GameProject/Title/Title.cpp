@@ -7,6 +7,7 @@ m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
 	m_img = COPY_RESOURCE("Title",CImage);
 	m_img.SetSize(1280,720);
+	//m_img.SetSize(1920, 1080);
 	title_flag = false;
 }
 
@@ -19,7 +20,7 @@ Title::~Title()
 void Title::Update()
 {
 	if (title_flag) {
-		//ボタン2(X)でタイトル破棄
+		//ボタン2(X)でタイトル破棄～ゲームシーンへ
 		if (PUSH(CInput::eButton2)) {
 			//m_kill = true;
 			SetKill();
@@ -27,7 +28,7 @@ void Title::Update()
 			Base::Add(new Game(true));
 		}
 
-		//ボタン1(Z)でタイトル破棄
+		//ボタン1(Z)でタイトル破棄～ゲームシーンへ
 		if (PUSH(CInput::eButton1)) {
 			//m_kill = true;
 			SetKill();

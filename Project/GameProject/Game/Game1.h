@@ -4,6 +4,7 @@
 
 class Game1 : public Base {
 public:
+	//CImage m_img;
 	int m_cnt;
 	CFont m_result_text;
 public:
