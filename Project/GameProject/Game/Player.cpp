@@ -6,7 +6,7 @@ Player::Player(const CVector2D& pos) : Base(eType_Player) {
 	m_img.Load("Image/Player.png");
 	/*m_pos_old = */ m_pos = pos;
 	//半径設定
-	m_rad = 6;
+	m_rad = 9;
 	//表示サイズ
 	//m_img.SetSize(32, 50);
 	m_img.SetSize(40, 70);
