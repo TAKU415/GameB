@@ -14,7 +14,7 @@ Game::Game(bool tuto) :Base(eType_Scene)
 {
 	m_cnt = 0;
 	Base::Add(new Field());
-	Base::Add(new Player(CVector2D(600,600)));
+	Base::Add(new Player(CVector2D(640,600)));
 	Base::Add(new EnemyBoss(CVector2D(640, 100)));
 	Base::Add(new kuma(CVector2D(240, 130)));
 	Base::Add(new kuma(CVector2D(640, 80)));

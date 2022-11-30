@@ -88,12 +88,12 @@ void Bullet1::Collision(Base* b) {
 	case eType_EnemyMob:
 
 		//‰~“¯Žm‚Ì”»’èiŽ©•ªA‘ÎÛ‚‚j
-		if (m_type == eType_Player_Attack && Base::CollisionCircle(this, b)) {
-			//SOUND("SE_Bomb")->Play();
-			b->SetKill();
-			SetKill();
-			Base::Add(new Effect(b->m_pos));
-		}
+		//if (m_type == eType_Player_Attack && Base::CollisionCircle(this, b)) {
+		//	//SOUND("SE_Bomb")->Play();
+		//	b->SetKill();
+		//	SetKill();
+		//	Base::Add(new Effect(b->m_pos));
+		//}
 		break;
 		
 	}
