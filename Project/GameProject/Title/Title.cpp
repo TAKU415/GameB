@@ -2,6 +2,7 @@
 #include "../Game/Game.h"
 #include "../Game/Game1.h"
 #include "../Game/Game2.h"
+#include "../Game/Game4.h"
 
 Title::Title():Base(eType_Scene),
 m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
@@ -41,6 +42,13 @@ void Title::Update()
 			SetKill();
 			Base::KillAll();
 			Base::Add(new Game2(true));
+		}
+		//ボタン4(V)でタイトル破棄～ゲームシーンへ
+		if (PUSH(CInput::eButton4)) {
+			//m_kill = true;
+			SetKill();
+			Base::KillAll();
+			Base::Add(new Game4(true));
 		}
 	}
 	else {
