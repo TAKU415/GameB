@@ -19,7 +19,7 @@ void Result::Update() {
 	//左クリックでタイトルへ
 	if (PUSH(CInput::eMouseL)) {
 		GameData::s_score = 300;
-		GameData::s_score1 = 5300;
+		GameData::s_score1 = 6000;
 		//finish_game = 2;
 		SetKill();
 	};
@@ -37,16 +37,16 @@ void Result::Draw() {
 	//m_img.SetSize(1920, 1080);
 	m_img.Draw();
 	//m_result_text.Draw(100, 700, 255, 0, 0, "マウス左クリック：終了");
-	if (GameData::s_score <= 0 && GameData::s_score1 > 300) {
+	if (GameData::s_score <= 0 && GameData::s_score1 > 0) {
 		//m_result_text.Draw(780, 256, 255, 0, 0, "GameOver");
 		m_img.Load("Image/GameOver.png");
 		//m_img.SetSize(1280, 720);
 	}
-	if (GameData::s_score1 <= 300 && GameData::s_score > 0 && GameData::s_score < 300) {
+	if (GameData::s_score1 <= 0 && GameData::s_score > 0 && GameData::s_score < 300) {
 		//m_result_text.Draw(780, 256, 0, 0, 255, "Clear");
 		m_img.Load("Image/Clear.png");
 	}
-	if (GameData::s_score1 <= 300 && GameData::s_score == 300) {
+	if (GameData::s_score1 <= 0 && GameData::s_score == 300) {
 		//m_result_text.Draw(780, 256, 255, 255, 0, "Perfect");
 		m_img.Load("Image/Perfect.png");
 	}

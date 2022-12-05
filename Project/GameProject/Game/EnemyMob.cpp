@@ -27,7 +27,7 @@ void EnemyMob::Update() {
 	if(b){
 		CVector2D vec = b->m_pos - m_pos;
 		m_ang = atan2(vec.x, vec.y);
-		if (m_cnt >= 35) {
+		if (m_cnt >= 59) {
 			//SOUND("SE_Hit01")->Play();
 			Base::Add(new Bullet1(eType_Enemy_Attack, m_pos, m_ang, 4));
 		}

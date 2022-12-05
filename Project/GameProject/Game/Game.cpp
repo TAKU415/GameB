@@ -27,10 +27,14 @@ void Game::Update()
 {
 	//ƒJƒEƒ“ƒg
 	m_cnt++;
-	if (m_cnt >= 300) {
+	if (m_cnt >= 500) {
+
 		Base::Add(new EnemyMob(CVector2D(1000, 200)));
+		Base::Add(new EnemyMob(CVector2D(800, 200)));
 		//Base::Add(new EnemyMob(CVector2D(640, 200)));
+		Base::Add(new EnemyMob(CVector2D(400, 200)));
 		Base::Add(new EnemyMob(CVector2D(200, 200)));
+
 		m_cnt = 0;
 		//m_is_tuto = tuto;
 
@@ -44,7 +48,7 @@ void Game::Update()
 		m_result_text.Draw(780, 256, 255, 255, 255, "Gameover");
 	}*/
 	
-	if (GameData::s_score1 <= 300 || GameData::s_score <= 0) {
+	if (GameData::s_score1 <= 0 || GameData::s_score <= 0) {
 		SetKill();
 	}
 

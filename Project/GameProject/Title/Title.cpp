@@ -28,7 +28,6 @@ void Title::Update()
 			Base::KillAll();
 			Base::Add(new Game(true));
 		}
-
 		//ボタン1(Z)でタイトル破棄～ゲームシーンへ
 		if (PUSH(CInput::eButton1)) {
 			//m_kill = true;
@@ -55,7 +54,5 @@ void Title::Draw()
 	m_img.Draw();
 	//文字表示
 	
-m_title_text.Draw(780, 256, 255, 0, 0, "Title(未定)");
-//m_title_text.Draw(650, 512, 255, 0, 0, "Push X Main(Hard)");
-//m_title_text.Draw(650, 452, 255, 0, 0, "Push Z Tutorial");
+m_title_text.Draw(780, 256, 255, 0, 0, "Nameless(未定)");
 }

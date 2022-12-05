@@ -2,6 +2,7 @@
 #include "GameData.h"
 #include "Game.h"
 #include "Game1.h"
+#include "Game2.h"
 
 UI::UI() :Base(eType_UI) {
 	m_img = COPY_RESOURCE("UI", CImage);
@@ -34,8 +35,8 @@ void UI::Draw() {
 				m_text.Draw(0, 720 - (32 * 3), 255, 255, 255, "W:上移動");
 				m_text.Draw(0, 720 - (32 * 2), 255, 255, 255, "S:下移動");
 				m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
-				if (GameData::s_score1 <= 500) {
-					m_text.Draw(0, 720 - (32 * 7), 255, 255, 255, "「THANK YOU」");
+				if (GameData::s_score1 <= 300) {
+					m_text.Draw(0, 720 - (32 * 7), 255, 0, 0, "「THANK YOU FOR PLAY」");
 				}
 			}
 		}
@@ -51,4 +52,14 @@ void UI::Draw() {
 		}
 	}
 
+	Game2* i = dynamic_cast<Game2*>(Base::FindObject(eType_Scene));
+	if (i) {
+		if (i->m_is_tuto) {
+			m_text.Draw(0, 720 - (32 * 5), 255, 255, 255, "A:左移動");
+			m_text.Draw(0, 720 - (32 * 4), 255, 255, 255, "D:右移動");
+			m_text.Draw(0, 720 - (32 * 3), 255, 255, 255, "W:上移動");
+			m_text.Draw(0, 720 - (32 * 2), 255, 255, 255, "S:下移動");
+			m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
+		}
+	}
 }
