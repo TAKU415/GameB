@@ -14,22 +14,18 @@ EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
 }
 
 void EnemyBoss::Update() {
-	//m_cnt1++;
-	//if (GameData::s_score1 <= 2500) {
-	//	if(m_cnt1 <= 60)
-	//	GameData::s_score = 600;
-	//}
-
 	m_cnt++;
 
 	//‘¬“x
-	const int move_speed = 2;
+	const int move_speed = 4;
 	//‰E
-	if (/*m_pos.x > 200 && */ HOLD(CInput::eLeft))
+	if (HOLD(CInput::eLeft) && m_pos.x <= 1280 - 32) {
 		m_pos.x += move_speed;
+	}
 	//¶
-	if (/*m_pos.x < 1080 && */ HOLD(CInput::eRight))
+	if (HOLD(CInput::eRight) && m_pos.x >= 0 + 32) {
 		m_pos.x -= move_speed;
+	}
 	//ã
 	//if (/*m_pos.y > 220 && */ HOLD(CInput::eDown))
 	//	m_pos.y -= move_speed;

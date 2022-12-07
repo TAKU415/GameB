@@ -56,12 +56,8 @@ void Game2::Update()
 
 Game2::~Game2()
 {
-	//GameData::s_score = 300;
-	//GameData::s_score1 = 5300;
 	//全てのオブジェクトを破棄
 	Base::KillAll();
-	//タイトルシーンへ
-	//Base::Add(new Title());
 	//リザルト画面へ
 	Result::finish_game = 3;
 	Base::Add(new Result(m_is_tuto));

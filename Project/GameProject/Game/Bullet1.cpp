@@ -7,17 +7,20 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 {
 	if (Type == eType_Player_Attack) {
 		m_img = COPY_RESOURCE("Bullet", CImage);
+		if (GameData::s_score1 <= 3000) {
+			m_img = COPY_RESOURCE("Bullet2", CImage);
+		}
 	}
 	else if(Type == eType_EnemyBoss_Attack) {
 		m_img = COPY_RESOURCE("Bullet3", CImage);
 		if (GameData::s_score1 <= 4000) {
 			m_img = COPY_RESOURCE("Bullet2", CImage);
 		}
-		if (GameData::s_score1 <= 2500) {
+		if (GameData::s_score1 <= 3000) {
 			m_img = COPY_RESOURCE("Bullet3", CImage);
 		}
-		if (GameData::s_score1 <= 1000) {
-			m_img = COPY_RESOURCE("Bullet2", CImage);
+		if (GameData::s_score1 <= 1500) {
+			m_img = COPY_RESOURCE("Bullet", CImage);
 		}
 	}
 	else if (Type == eType_kuma_Attack) {
@@ -74,6 +77,9 @@ void Bullet1::Collision(Base* b) {
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
 			GameData::s_score -= 10;
+			if (GameData::s_score1 <= 3000) {
+				GameData::s_score -= 100;
+			}
 		}
 
 		if (m_type == eType_kuma_Attack && Base::CollisionCircle(this, b)) {
@@ -81,6 +87,9 @@ void Bullet1::Collision(Base* b) {
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
 			GameData::s_score -= 50;
+			if (GameData::s_score1 <= 3000) {
+				GameData::s_score -= 100;
+			}
 		}
 
 		break;
@@ -94,6 +103,15 @@ void Bullet1::Collision(Base* b) {
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
 			GameData::s_score1 -= 100;
+			if (GameData::s_score1 <= 3000) {
+				GameData::s_score1 -= 80;
+			}
+			if (GameData::s_score1 <= 2000) {
+				GameData::s_score1 -= 60;
+			}
+			if (GameData::s_score1 <= 1000) {
+				GameData::s_score1 -= 40;
+			}
 		}
 		break;
 

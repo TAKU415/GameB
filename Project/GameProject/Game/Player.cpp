@@ -4,7 +4,7 @@
 
 Player::Player(const CVector2D& pos) : Base(eType_Player) {
 	m_img.Load("Image/Player.png");
-	/*m_pos_old = */ m_pos = pos;
+	m_pos = pos;
 	//半径設定
 	m_rad = 9;
 	//表示サイズ
@@ -22,16 +22,16 @@ void Player::Update() {
 	//速度
 	const int move_speed = 4;
 	//右
-	if (HOLD(CInput::eRight))
+	if (HOLD(CInput::eRight) && m_pos.x <= 1280 - 20)
 		m_pos.x += move_speed;
 	//左
-	if (HOLD(CInput::eLeft))
+	if (HOLD(CInput::eLeft)&& m_pos.x >= 0 + 20)
 		m_pos.x -= move_speed;
 	//上
-	if (HOLD(CInput::eUp))
+	if (HOLD(CInput::eUp)&& m_pos.y >= 0 + 35)
 		m_pos.y -= move_speed;
 	//下
-	if (HOLD(CInput::eDown))
+	if (HOLD(CInput::eDown) && m_pos.y <= 720 - 35)
 		m_pos.y += move_speed;
 
 	//マウスのベクトル
@@ -68,16 +68,19 @@ void Player::Update() {
 		if (HOLD(CInput::eButton5)) {
 			if (m_cnt >= 20) {
 				//SOUND("SE_Hit01")->Play();
-				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(40), 4));
 				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(20), 4));
+				//if (GameData::s_score1 <= 3000) {
+				//	Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(5), 4));
+				//}
 				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
+				//if (GameData::s_score1 <= 3000) {
+				//	Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-5), 4));
+				//}
 				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
-				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-40), 4));
 				m_cnt = 0;
 			}
 		}
 	}
-
 }
 
 void Player::Draw() {

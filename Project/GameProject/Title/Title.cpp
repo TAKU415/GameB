@@ -61,6 +61,5 @@ void Title::Draw()
 {
 	m_img.Draw();
 	//•¶Žš•\Ž¦
-	
-m_title_text.Draw(780, 256, 255, 0, 0, "Nameless(–¢’è)");
+m_title_text.Draw(780, 256, 255, 0, 0, "TITLE(–¢’è)");
 }

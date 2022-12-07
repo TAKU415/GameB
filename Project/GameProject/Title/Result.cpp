@@ -22,14 +22,7 @@ void Result::Update() {
 		GameData::s_score1 = 6000;
 		//finish_game = 2;
 		SetKill();
-	};
-	//スペースキーでRestart
-	//if (PUSH(CInput::eButton5)) {
-	//	GameData::s_score = 300;
-	//	GameData::s_score1 = 5300;
-	//	//finish_game = 0;
-	//	SetKill();
-	//};
+	}
 }
 
 void Result::Draw() {

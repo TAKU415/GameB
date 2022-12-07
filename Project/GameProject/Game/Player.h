@@ -1,14 +1,13 @@
 #pragma once
 #include "../Base/Base.h"
-
+class Gauge;
 class Player : public Base {
 private:
 	CImage m_img;
-	//int m_hp;
 	int m_cnt;
 	int m_cnt1;
 	float m_ang;
-	float m_pos_old;
+	//float m_pos_old;
 
 public:
 	Player(const CVector2D& pos);
