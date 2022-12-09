@@ -16,7 +16,7 @@ Game::Game(bool tuto) :Base(eType_Scene)
 	Base::Add(new Field());
 	Base::Add(new Player(CVector2D(640,600)));
 	Base::Add(new EnemyBoss(CVector2D(640, 100)));
-	Base::Add(new kuma(CVector2D(240, 130)));
+	Base::Add(new kuma(CVector2D(200, 130)));
 	Base::Add(new kuma(CVector2D(640, 80)));
 	Base::Add(new kuma(CVector2D(1040, 130)));
 	Base::Add(new UI());
@@ -29,8 +29,8 @@ void Game::Update()
 	m_cnt++;
 	if (m_cnt >= 500) {
 
-		Base::Add(new EnemyMob(CVector2D(1000, 200)));
-		Base::Add(new EnemyMob(CVector2D(800, 200)));
+		Base::Add(new EnemyMob(CVector2D(1040, 200)));
+		Base::Add(new EnemyMob(CVector2D(840, 200)));
 		//Base::Add(new EnemyMob(CVector2D(640, 200)));
 		Base::Add(new EnemyMob(CVector2D(400, 200)));
 		Base::Add(new EnemyMob(CVector2D(200, 200)));

@@ -3,7 +3,6 @@
 #include "Player.h"
 #include "EnemyBoss.h"
 #include "EnemyMob.h"
-//#include "NPC.h"
 #include "Effect.h"
 #include "GameData.h"
 #include "Field.h"
@@ -17,6 +16,7 @@ Game1::Game1(bool tuto) :Base(eType_Scene)
 	
 	Base::Add(new Player(CVector2D(640, 600)));
 	Base::Add(new EnemyBoss(CVector2D(640, 100)));
+	Base::Add(new EnemyBoss(CVector2D(600, 100)));
 	Base::Add(new UI());
 	m_is_tuto = tuto;
 }
@@ -25,7 +25,7 @@ void Game1::Update()
 {
 	//ƒJƒEƒ“ƒg
 	m_cnt++;
-	if (m_cnt >= 150) {
+	if (m_cnt >= 193) {
 		//Base::Add(new EnemyMob(CVector2D(1000, 200)));
 		Base::Add(new EnemyMob(CVector2D(640, 200)));
 		//Base::Add(new EnemyMob(CVector2D(200, 200)));

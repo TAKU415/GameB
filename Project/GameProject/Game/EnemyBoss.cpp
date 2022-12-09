@@ -4,13 +4,16 @@
 
 EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
 	m_img.Load("Image/Boss.png");
+	
 	m_pos = pos;
 	//半径設定
 	m_rad = 23;
 	//表示サイズ
-	m_img.SetSize(64, 64);
+	//m_img.SetSize(64, 64);
+	m_img.SetSize(84, 84);
 	//画像の中心に設定
-	m_img.SetCenter(32, 32);
+	//m_img.SetCenter(32, 32);
+	m_img.SetCenter(42, 42);
 }
 
 void EnemyBoss::Update() {

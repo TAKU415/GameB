@@ -7,9 +7,6 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 {
 	if (Type == eType_Player_Attack) {
 		m_img = COPY_RESOURCE("Bullet", CImage);
-		if (GameData::s_score1 <= 3000) {
-			m_img = COPY_RESOURCE("Bullet2", CImage);
-		}
 	}
 	else if(Type == eType_EnemyBoss_Attack) {
 		m_img = COPY_RESOURCE("Bullet3", CImage);
@@ -19,12 +16,18 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 		if (GameData::s_score1 <= 3000) {
 			m_img = COPY_RESOURCE("Bullet3", CImage);
 		}
-		if (GameData::s_score1 <= 1500) {
+		if (GameData::s_score1 <= 2000 && GameData::s_score == 300) {
 			m_img = COPY_RESOURCE("Bullet", CImage);
 		}
 	}
 	else if (Type == eType_kuma_Attack) {
 		m_img = COPY_RESOURCE("Bullet2", CImage);
+		if (GameData::s_score1 <= 3000 && GameData::s_score == 300) {
+			m_img = COPY_RESOURCE("Bullet3", CImage);
+		}
+		if (GameData::s_score1 <= 1000 && GameData::s_score == 300) {
+			m_img = COPY_RESOURCE("Bullet", CImage);
+		}
 	}
 	else {
 		m_img = COPY_RESOURCE("Bullet2", CImage);
