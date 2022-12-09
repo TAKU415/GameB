@@ -20,6 +20,18 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 			m_img = COPY_RESOURCE("Bullet", CImage);
 		}
 	}
+	else if (Type == eType_EnemyBoss_Attack2) {
+		m_img = COPY_RESOURCE("Bullet3", CImage);
+		if (GameData::s_score1 <= 4000) {
+			m_img = COPY_RESOURCE("Bullet2", CImage);
+		}
+		if (GameData::s_score1 <= 3000) {
+			m_img = COPY_RESOURCE("Bullet3", CImage);
+		}
+		if (GameData::s_score1 <= 2000 && GameData::s_score == 300) {
+			m_img = COPY_RESOURCE("Bullet", CImage);
+		}
+	}
 	else if (Type == eType_kuma_Attack) {
 		m_img = COPY_RESOURCE("Bullet2", CImage);
 		if (GameData::s_score1 <= 3000 && GameData::s_score == 300) {
@@ -66,6 +78,16 @@ void Bullet1::Collision(Base* b) {
 
 		//‰~“¯Žm‚Ì”»’èiŽ©•ªA‘ÎÛ‚‚j
 		if (m_type == eType_EnemyBoss_Attack && Base::CollisionCircle(this, b)) {
+			//SOUND("SE_Bomb")->Play();
+			SetKill();
+			Base::Add(new Effect(b->m_pos));
+			GameData::s_score -= 50;
+			if (GameData::s_score1 <= 3000) {
+				GameData::s_score -= 100;
+			}
+		}
+
+		if (m_type == eType_EnemyBoss_Attack2 && Base::CollisionCircle(this, b)) {
 			//SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));

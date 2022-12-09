@@ -1,7 +1,7 @@
 #include "Game1.h"
 #include "Bullet1.h"
 #include "Player.h"
-#include "EnemyBoss.h"
+#include "EnemyBoss2.h"
 #include "EnemyMob.h"
 #include "Effect.h"
 #include "GameData.h"
@@ -15,8 +15,7 @@ Game1::Game1(bool tuto) :Base(eType_Scene)
 	Base::Add(new Field());
 	
 	Base::Add(new Player(CVector2D(640, 600)));
-	Base::Add(new EnemyBoss(CVector2D(640, 100)));
-	Base::Add(new EnemyBoss(CVector2D(600, 100)));
+	Base::Add(new EnemyBoss2(CVector2D(640, 100)));
 	Base::Add(new UI());
 	m_is_tuto = tuto;
 }

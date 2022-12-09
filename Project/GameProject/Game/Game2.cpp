@@ -1,7 +1,7 @@
 #include "Game2.h"
 #include "Bullet1.h"
 #include "Player.h"
-#include "EnemyBoss.h"
+#include "EnemyBoss2.h"
 #include "EnemyMob.h"
 #include "kuma.h"
 #include "Effect.h"
@@ -15,7 +15,7 @@ Game2::Game2(bool tuto) :Base(eType_Scene)
 	m_cnt = 0;
 	Base::Add(new Field());
 	Base::Add(new Player(CVector2D(640, 600)));
-	Base::Add(new EnemyBoss(CVector2D(640, 100)));
+	Base::Add(new EnemyBoss2(CVector2D(640, 100)));
 	//Base::Add(new kuma(CVector2D(240, 130)));
 	Base::Add(new kuma(CVector2D(640, 360)));
 	//Base::Add(new kuma(CVector2D(1040, 130)));
