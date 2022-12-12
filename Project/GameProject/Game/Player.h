@@ -1,6 +1,5 @@
 #pragma once
 #include "../Base/Base.h"
-class Gauge;
 class Player : public Base {
 private:
 	CImage m_img;

@@ -6,6 +6,10 @@
 #include "Base/Base.h"
 #include "Title/Title.h"
 #include "Game/Game.h"
+#include "Game/Game1.h"
+#include "Game/Game2.h"
+#include "Game/Game4.h"
+#include "Title/Result.h"
 
 
 //--------------------------------------------
