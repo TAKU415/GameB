@@ -65,6 +65,7 @@ void Bullet1::Update() {
 
 void Bullet1::Draw() {
 	m_img.SetPos(m_pos);
+	m_img.SetSize(42,64);
 	m_img.SetAng(m_ang);
 	m_img.Draw();
 }
@@ -81,8 +82,10 @@ void Bullet1::Collision(Base* b) {
 			//SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score -= 50;
-			if (GameData::s_score1 <= 3000) {
+			if (GameData::s_score1 <= 6000) {
+				GameData::s_score -= 50;
+			}
+			else if (GameData::s_score1 <= 3000) {
 				GameData::s_score -= 100;
 			}
 		}
@@ -91,8 +94,10 @@ void Bullet1::Collision(Base* b) {
 			//SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score -= 100;
-			if (GameData::s_score1 <= 3000) {
+			if (GameData::s_score1 <= 6000) {
+				GameData::s_score -= 100;
+			}
+			else if (GameData::s_score1 <= 3000) {
 				GameData::s_score -= 300;
 			}
 		}
@@ -101,8 +106,10 @@ void Bullet1::Collision(Base* b) {
 			//SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score -= 10;
-			if (GameData::s_score1 <= 3000) {
+			if (GameData::s_score1 <= 6000) {
+				GameData::s_score -= 10;
+			}
+			else if (GameData::s_score1 <= 3000) {
 				GameData::s_score -= 100;
 			}
 		}
@@ -111,8 +118,10 @@ void Bullet1::Collision(Base* b) {
 			//SOUND("SE_Bomb")->Play();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score -= 50;
-			if (GameData::s_score1 <= 3000) {
+			if (GameData::s_score1 <= 6000) {
+				GameData::s_score -= 50;
+			}
+			else if (GameData::s_score1 <= 3000) {
 				GameData::s_score -= 100;
 			}
 		}
@@ -127,16 +136,7 @@ void Bullet1::Collision(Base* b) {
 			//b->SetKill();
 			SetKill();
 			Base::Add(new Effect(b->m_pos));
-			GameData::s_score1 -= 100;
-			if (GameData::s_score1 <= 3000) {
-				GameData::s_score1 -= 80;
-			}
-			if (GameData::s_score1 <= 2000) {
-				GameData::s_score1 -= 60;
-			}
-			if (GameData::s_score1 <= 1000) {
-				GameData::s_score1 -= 40;
-			}
+				GameData::s_score1 -= 100;
 		}
 		break;
 

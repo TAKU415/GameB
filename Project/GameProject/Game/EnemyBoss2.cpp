@@ -3,7 +3,7 @@
 #include "GameData.h"
 
 EnemyBoss2::EnemyBoss2(const CVector2D& pos) : Base(eType_EnemyBoss) {
-	m_img.Load("Image/Boss2.png");
+	m_img.Load("Image/Boss.png");
 
 	m_pos = pos;
 	//”¼ŒaÝ’è
@@ -40,77 +40,41 @@ void EnemyBoss2::Update() {
 	if (m_cnt >= 30) {
 		//SOUND("SE_Hit01")->Play();
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(180), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(175), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(170), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(165), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(160), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(155), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(150), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(145), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(140), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(135), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(130), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(125), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(120), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(115), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(110), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(105), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(100), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(95), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(90), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(85), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(80), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(75), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(70), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(65), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(60), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(55), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(50), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(45), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(40), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(35), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(30), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(25), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(20), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(15), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(10), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(5), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(0), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-5), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-10), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-15), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-20), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-25), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-30), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-35), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-40), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-45), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-50), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-55), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-60), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-65), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-70), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-75), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-80), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-85), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-90), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-95), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-100), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-105), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-110), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-115), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-120), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-125), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-130), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-135), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-140), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-145), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-150), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-155), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-160), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-165), 4));
 		Base::Add(new Bullet1(eType_EnemyBoss_Attack2, m_pos, m_ang + DtoR(-170), 4));
-		//Base::Add(new Bullet1(eType_EnemyBoss_Attack, m_pos, m_ang + DtoR(-175), 4));
 
 		m_cnt = 0;
 	}

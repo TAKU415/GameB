@@ -19,22 +19,29 @@ void UI::Draw() {
 		m_img.Draw();
 	}
 
-	int score1 = GameData::s_score1;
+	/*int score1 = GameData::s_score1;
 	for (int i = 0; i < 5; i++, score1 /= 10) {
 		int s = score1 % 10;
 		m_img.SetRect(16 * s, 16, 16 * s + 16, 32);
 		m_img.SetSize(24, 24);
 		m_img.SetPos(500 - 24 * i, 0);
 		m_img.Draw();
-	}
+	}*/
 
 	Game* g = dynamic_cast<Game*>(Base::FindObject(eType_Scene));
 		if (g) {
 			if (g->m_is_tuto) {
 				m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
-				if (GameData::s_score1 <= 300) {
-					m_text.Draw(0, 720 - (32 * 7), 255, 0, 0, "「THANK YOU FOR PLAY」");
+
+				int score1 = GameData::s_score1;
+				for (int i = 0; i < 5; i++, score1 /= 10) {
+					int s = score1 % 10;
+					m_img.SetRect(16 * s, 16, 16 * s + 16, 32);
+					m_img.SetSize(24, 24);
+					m_img.SetPos(500 - 24 * i, 0);
+					m_img.Draw();
 				}
+
 			}
 		}
 
@@ -46,6 +53,15 @@ void UI::Draw() {
 			m_text.Draw(0, 720 - (32 * 3), 255, 255, 255, "W:上移動");
 			m_text.Draw(0, 720 - (32 * 2), 255, 255, 255, "S:下移動");
 			m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
+
+			int score1 = GameData::s_score1;
+			for (int i = 0; i < 5; i++, score1 /= 10) {
+				int s = score1 % 10;
+				m_img.SetRect(16 * s, 16, 16 * s + 16, 32);
+				m_img.SetSize(24, 24);
+				m_img.SetPos(500 - 24 * i, 0);
+				m_img.Draw();
+			}
 		}
 	}
 
@@ -57,15 +73,22 @@ void UI::Draw() {
 			m_text.Draw(0, 720 - (32 * 3), 255, 255, 255, "W:上移動");
 			m_text.Draw(0, 720 - (32 * 2), 255, 255, 255, "S:下移動");
 			m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
+
+			int score1 = GameData::s_score1;
+			for (int i = 0; i < 5; i++, score1 /= 10) {
+				int s = score1 % 10;
+				m_img.SetRect(16 * s, 16, 16 * s + 16, 32);
+				m_img.SetSize(24, 24);
+				m_img.SetPos(500 - 24 * i, 0);
+				m_img.Draw();
+			}
+
 		}
 	}
 	Game4* j = dynamic_cast<Game4*>(Base::FindObject(eType_Scene));
 	if (j) {
 		if (j->m_is_tuto) {
-			m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
-			if (GameData::s_score1 <= 300) {
-				m_text.Draw(0, 720 - (32 * 7), 255, 0, 0, "「THANK YOU FOR PLAY」");
-			}
+			//m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
 		}
 	}
 }

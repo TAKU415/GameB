@@ -68,6 +68,7 @@ void Init(void)
 	
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player.png"));
 	ADD_RESOURCE("EnemyMob", CImage::CreateImage("Image/EnemyMob.png"));
+	ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/Boss.png"));
 	ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/Boss2.png"));
 	ADD_RESOURCE("Effect_Bomb", CImage::CreateImage("Image/Effect_Bomb.png"));
 	ADD_RESOURCE("Bullet", CImage::CreateImage("Image/Bullet.png"));
@@ -80,7 +81,6 @@ void Init(void)
 	ADD_RESOURCE("Clear", CImage::CreateImage("Image/Clear.png"));
 	ADD_RESOURCE("Perfect", CImage::CreateImage("Image/Perfect.png"));
 	ADD_RESOURCE("Field", CImage::CreateImage("Image/BackGround.png"));
-	ADD_RESOURCE("Field2", CImage::CreateImage("Image/BackGround2.png"));
 	ADD_RESOURCE("kuma", CImage::CreateImage("Image/kuma.png"));
 
 	SOUND("SE_Bomb")->Load("Sound/SE/SE_Bomb.wav", 10);
