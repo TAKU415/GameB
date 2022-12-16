@@ -26,21 +26,20 @@ void Result::Update() {
 }
 
 void Result::Draw() {
+	//表示サイズ
 	m_img.SetSize(1280, 720);
-	//m_img.SetSize(1920, 1080);
+	//召喚
 	m_img.Draw();
-	//m_result_text.Draw(100, 700, 255, 0, 0, "マウス左クリック：終了");
+	//分岐1　GameOver
 	if (GameData::s_score <= 0 && GameData::s_score1 > 0) {
-		//m_result_text.Draw(780, 256, 255, 0, 0, "GameOver");
 		m_img.Load("Image/GameOver.png");
-		//m_img.SetSize(1280, 720);
 	}
+	//分岐2　Clear
 	if (GameData::s_score1 <= 0 && GameData::s_score > 0 && GameData::s_score < 300) {
-		//m_result_text.Draw(780, 256, 0, 0, 255, "Clear");
 		m_img.Load("Image/Clear.png");
 	}
+	//分岐3　Perfect
 	if (GameData::s_score1 <= 0 && GameData::s_score == 300) {
-		//m_result_text.Draw(780, 256, 255, 255, 0, "Perfect");
 		m_img.Load("Image/Perfect.png");
 	}
 }

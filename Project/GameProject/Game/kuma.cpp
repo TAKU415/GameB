@@ -2,7 +2,7 @@
 #include "Bullet1.h"
 
 kuma::kuma(const CVector2D& pos) : Base(eType_kuma) {
-	m_img.Load("Image/kuma.png");
+	//m_img.Load("Image/kuma.png");
 	m_pos = pos;
 	//îºåaê›íË
 	m_rad = 16;
@@ -40,9 +40,9 @@ void kuma::Update() {
 
 
 void kuma::Draw() {
-	m_img.SetPos(m_pos);
-	m_img.SetAng(m_ang);
-	m_img.Draw();
+	//m_img.SetPos(m_pos);
+	//m_img.SetAng(m_ang);
+	//m_img.Draw();
 }
 
 void kuma::Collision(Base* b)

@@ -25,10 +25,10 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 		if (GameData::s_score1 <= 4000) {
 			m_img = COPY_RESOURCE("Bullet2", CImage);
 		}
-		if (GameData::s_score1 <= 3000) {
+		if (GameData::s_score1 <= 2000) {
 			m_img = COPY_RESOURCE("Bullet3", CImage);
 		}
-		if (GameData::s_score1 <= 2000 && GameData::s_score == 300) {
+		if (GameData::s_score1 <= 1000 && GameData::s_score == 300) {
 			m_img = COPY_RESOURCE("Bullet", CImage);
 		}
 	}

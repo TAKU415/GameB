@@ -18,17 +18,17 @@ Game1::Game1(bool tuto) :Base(eType_Scene)
 	Base::Add(new Player(CVector2D(640, 600)));
 	Base::Add(new EnemyBoss2(CVector2D(640, 100)));
 	
-	Base::Add(new EnemyMob2(CVector2D(1140, 10)));
+	Base::Add(new EnemyMob2(CVector2D(1140, 0)));
 	//Base::Add(new EnemyMob2(CVector2D(1040, 10)));
-	Base::Add(new EnemyMob2(CVector2D(940, 10)));
+	Base::Add(new EnemyMob2(CVector2D(940, 0)));
 	//Base::Add(new EnemyMob2(CVector2D(840, 10)));
-	Base::Add(new EnemyMob2(CVector2D(740, 10)));
+	Base::Add(new EnemyMob2(CVector2D(740, 0)));
 	//Base::Add(new EnemyMob2(CVector2D(640, 10)));
-	Base::Add(new EnemyMob2(CVector2D(540, 10)));
+	Base::Add(new EnemyMob2(CVector2D(540, 0)));
 	//Base::Add(new EnemyMob2(CVector2D(440, 10)));
-	Base::Add(new EnemyMob2(CVector2D(340, 10)));
+	Base::Add(new EnemyMob2(CVector2D(340, 0)));
 	//Base::Add(new EnemyMob2(CVector2D(240, 10)));
-	Base::Add(new EnemyMob2(CVector2D(140, 10)));
+	Base::Add(new EnemyMob2(CVector2D(140, 0)));
 	
 	Base::Add(new UI());
 	m_is_tuto = tuto;

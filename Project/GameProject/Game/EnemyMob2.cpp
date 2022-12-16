@@ -30,8 +30,7 @@ void EnemyMob2::Update() {
 	//	m_ang = atan2(vec.x, vec.y);
 		if (m_cnt >= 59) {
 			//SOUND("SE_Hit01")->Play();
-			Base::Add(new Bullet1(eType_Enemy_Attack2, m_pos, m_ang, 4));
-			//Base::Add(new Bullet1(eType_Enemy_Attack2, m_pos, m_ang+DtoR(30), 4));
+			Base::Add(new Bullet1(eType_Enemy_Attack2, m_pos, m_ang, 5));
 		}
 	//}
 }

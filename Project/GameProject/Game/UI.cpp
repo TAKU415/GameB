@@ -19,6 +19,14 @@ void UI::Draw() {
 		m_img.Draw();
 	}
 
+	if (HOLD(CInput::eButton10)) {
+		if (GameData::s_score1 <= 6000 && GameData::s_score1 > 3000) {
+			m_text.Draw(0, 720 - (32 * 7), 255, 0, 0, "ねぇ、遊ぼ");
+		}
+		if (GameData::s_score1 <= 3000 && GameData::s_score1 >= 1500) {
+			m_text.Draw(0, 720 - (32 * 7), 255, 0, 0, "わーい！.....");
+		}
+	}
 	/*int score1 = GameData::s_score1;
 	for (int i = 0; i < 5; i++, score1 /= 10) {
 		int s = score1 % 10;
@@ -53,7 +61,7 @@ void UI::Draw() {
 			m_text.Draw(0, 720 - (32 * 3), 255, 255, 255, "W:上移動");
 			m_text.Draw(0, 720 - (32 * 2), 255, 255, 255, "S:下移動");
 			m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
-
+			
 			int score1 = GameData::s_score1;
 			for (int i = 0; i < 5; i++, score1 /= 10) {
 				int s = score1 % 10;

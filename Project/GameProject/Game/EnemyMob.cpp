@@ -2,7 +2,7 @@
 #include "Bullet1.h"
 
 EnemyMob::EnemyMob(const CVector2D& pos) : Base(eType_EnemyMob) {
-	m_img.Load("Image/EnemyMob.png");
+	//m_img.Load("Image/EnemyMob.png");
 	m_pos = pos;
 	//îºåaê›íË
 	m_rad = 16;
@@ -36,9 +36,9 @@ void EnemyMob::Update() {
 }
 
 void EnemyMob::Draw() {
-	m_img.SetPos(m_pos);
-	m_img.SetAng(m_ang);
-	m_img.Draw();
+	//m_img.SetPos(m_pos);
+	//m_img.SetAng(m_ang);
+	//m_img.Draw();
 }
 
 void EnemyMob::Collision(Base* b)

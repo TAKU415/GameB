@@ -7,7 +7,7 @@ Player::Player(const CVector2D& pos) : Base(eType_Player) {
 	
 	m_pos = pos;
 	//半径設定
-	m_rad = 3;
+	m_rad = 5;
 	//表示サイズ
 	m_img.SetSize(40, 70);
 	//画像の中心に設定
