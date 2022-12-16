@@ -7,20 +7,21 @@ EnemyMob::EnemyMob(const CVector2D& pos) : Base(eType_EnemyMob) {
 	//半径設定
 	m_rad = 16;
 	//表示サイズ
-	m_img.SetSize(32, 32);
+	m_img.SetSize(44, 44);
 	//画像の中心に設定
-	m_img.SetCenter(16, 16);
+	m_img.SetCenter(22, 22);
 }
 
 void EnemyMob::Update() {
 	m_cnt++;
-		if (m_cnt >= 60) {
-			m_pos.y += 50;
-			m_cnt = 0;
-		}
+	if (m_cnt >= 60) {
+		m_pos.y += 50;
+		m_cnt = 0;
+	}
 	if (m_pos.y > 720) {
 		SetKill();
 	}
+	
 	//プレイヤーを取得
 	Base* b = Base::FindObject(eType_Player);
 	//弾（プレイヤーがいれば）
