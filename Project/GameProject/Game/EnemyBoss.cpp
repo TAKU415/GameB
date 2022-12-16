@@ -7,12 +7,10 @@ EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
 	
 	m_pos = pos;
 	//半径設定
-	m_rad = 23;
+	m_rad = 25;
 	//表示サイズ
-	//m_img.SetSize(64, 64);
 	m_img.SetSize(74, 74);
 	//画像の中心に設定
-	//m_img.SetCenter(32, 32);
 	m_img.SetCenter(37, 37);
 }
 
