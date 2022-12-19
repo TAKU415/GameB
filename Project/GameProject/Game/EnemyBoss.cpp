@@ -28,11 +28,13 @@ void EnemyBoss::Update() {
 		m_pos.x -= move_speed;
 	}
 	//ã
-	//if (/*m_pos.y > 220 && */ HOLD(CInput::eDown))
-	//	m_pos.y -= move_speed;
+	if (HOLD(CInput::eDown) && m_pos.y >= 0 + 32) {
+		m_pos.y -= move_speed;
+	}
 	//‰º
-	//if (/*m_pos.y < 520 && */ HOLD(CInput::eUp))
-	//	m_pos.y += move_speed;
+	if (HOLD(CInput::eUp) && m_pos.y <= 720 - 32) {
+		m_pos.y += move_speed;
+	}
 
 	//’e
 	if (m_cnt >= 30) {
