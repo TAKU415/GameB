@@ -46,10 +46,6 @@ void Game1::Update()
 		//m_is_tuto = tuto;
 	}
 
-	/*if (GameData::s_score >= 500) {
-		m_result_text.Draw(780, 256, 255, 255, 255, "Gameover");
-	}*/
-
 	if (GameData::s_score1 <= 0 || GameData::s_score <= 0) {
 		SetKill();
 	}

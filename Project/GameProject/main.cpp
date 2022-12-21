@@ -81,6 +81,7 @@ void Init(void)
 	ADD_RESOURCE("Bullet2", CImage::CreateImage("Image/Bullet2.png"));
 	ADD_RESOURCE("Bullet3", CImage::CreateImage("Image/Bullet3.png"));
 	ADD_RESOURCE("Bullet4", CImage::CreateImage("Image/Bullet4.png"));
+	ADD_RESOURCE("hinotama", CImage::CreateImage("Image/hinotama.png"));
 	//UI
 	ADD_RESOURCE("UI", CImage::CreateImage("Image/UI.png"));
 	//Title and Result

@@ -9,27 +9,27 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 		m_img = COPY_RESOURCE("Bullet", CImage);
 	}
 	else if(Type == eType_EnemyBoss_Attack) {
-		m_img = COPY_RESOURCE("Bullet3", CImage);
+		m_img = COPY_RESOURCE("hinotama", CImage);
 		if (GameData::s_score1 <= 4000) {
 			m_img = COPY_RESOURCE("Bullet2", CImage);
 		}
 		if (GameData::s_score1 <= 3000) {
-			m_img = COPY_RESOURCE("Bullet3", CImage);
+			m_img = COPY_RESOURCE("hinotama", CImage);
 		}
 		if (GameData::s_score1 <= 2000 && GameData::s_score == 300) {
-			m_img = COPY_RESOURCE("Bullet", CImage);
+			m_img = COPY_RESOURCE("Bullet2", CImage);
 		}
 	}
 	else if (Type == eType_EnemyBoss_Attack2) {
-		m_img = COPY_RESOURCE("Bullet3", CImage);
+		m_img = COPY_RESOURCE("hinotama", CImage);
 		if (GameData::s_score1 <= 4000) {
 			m_img = COPY_RESOURCE("Bullet2", CImage);
 		}
 		if (GameData::s_score1 <= 2000) {
-			m_img = COPY_RESOURCE("Bullet3", CImage);
+			m_img = COPY_RESOURCE("hinotama", CImage);
 		}
 		if (GameData::s_score1 <= 1000 && GameData::s_score == 300) {
-			m_img = COPY_RESOURCE("Bullet", CImage);
+			m_img = COPY_RESOURCE("Bullet2", CImage);
 		}
 	}
 	else if (Type == eType_kuma_Attack) {
@@ -38,7 +38,7 @@ Bullet1::Bullet1(int Type, const CVector2D& pos, float ang, float speed)
 			m_img = COPY_RESOURCE("Bullet3", CImage);
 		}
 		if (GameData::s_score1 <= 1000 && GameData::s_score == 300) {
-			m_img = COPY_RESOURCE("Bullet", CImage);
+			m_img = COPY_RESOURCE("Bullet2", CImage);
 		}
 	}
 	else if (Type == eType_Enemy_Attack2) {

@@ -58,5 +58,5 @@ void Title::Draw()
 	//召喚
 	m_img.Draw();
 	//文字表示
-m_title_text.Draw(780, 256, 255, 0, 0, "TITLE(未定)");
+	m_title_text.Draw(780, 256, 255, 0, 0, "BARRAGE GAME[バラージ(バレッジ)ゲーム]");
 }
