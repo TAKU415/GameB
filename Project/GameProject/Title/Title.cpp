@@ -58,5 +58,5 @@ void Title::Draw()
 	//è¢ä´
 	m_img.Draw();
 	//ï∂éöï\é¶
-	m_title_text.Draw(780, 256, 255, 0, 0, "BARRAGE GAME");
+	m_title_text.Draw(780, 256, 255, 0, 0, "BARRAGE GAME(âº)");
 }
