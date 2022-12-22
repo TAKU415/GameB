@@ -23,7 +23,7 @@ void UI::Draw() {
 		if (GameData::s_score1 <= 6000 && GameData::s_score1 > 3000) {
 			m_text.Draw(0, 720 - (32 * 7), 255, 0, 0, "ねぇ、遊ぼ");
 		}
-		if (GameData::s_score1 <= 3000 && GameData::s_score1 >= 1500) {
+		if (GameData::s_score1 <= 3000 && GameData::s_score1 >= 1500 || GameData::s_score1 <= 3000 && GameData::s_score <= 100 && GameData::s_score1 >= 2000) {
 			m_text.Draw(0, 720 - (32 * 7), 255, 0, 0, "わーい！.....");
 		}
 	}
@@ -39,7 +39,7 @@ void UI::Draw() {
 	Game* g = dynamic_cast<Game*>(Base::FindObject(eType_Scene));
 		if (g) {
 			if (g->m_is_tuto) {
-				m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
+				m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "SPACE:攻撃");
 
 				int score1 = GameData::s_score1;
 				for (int i = 0; i < 5; i++, score1 /= 10) {
@@ -56,11 +56,11 @@ void UI::Draw() {
 	Game1* h = dynamic_cast<Game1*>(Base::FindObject(eType_Scene));
 	if (h) {
 		if (h->m_is_tuto) {
-			m_text.Draw(0, 720 - (32 * 5), 255, 255, 255, "A:左移動");
-			m_text.Draw(0, 720 - (32 * 4), 255, 255, 255, "D:右移動");
-			m_text.Draw(0, 720 - (32 * 3), 255, 255, 255, "W:上移動");
-			m_text.Draw(0, 720 - (32 * 2), 255, 255, 255, "S:下移動");
-			m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
+			m_text.Draw(0, 720 - (32 * 3), 255, 255, 255, "A:左移動");
+			m_text.Draw(0, 720 - (32 * 5), 255, 255, 255, "D:右移動");
+			m_text.Draw(0, 720 - (32 * 2), 255, 255, 255, "W:上移動");
+			m_text.Draw(0, 720 - (32 * 4), 255, 255, 255, "S:下移動");
+			m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "SPACE:攻撃");
 			
 			int score1 = GameData::s_score1;
 			for (int i = 0; i < 5; i++, score1 /= 10) {
@@ -80,7 +80,7 @@ void UI::Draw() {
 			m_text.Draw(0, 720 - (32 * 4), 255, 255, 255, "D:右移動");
 			m_text.Draw(0, 720 - (32 * 3), 255, 255, 255, "W:上移動");
 			m_text.Draw(0, 720 - (32 * 2), 255, 255, 255, "S:下移動");
-			m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "マウス左&SPACE:攻撃");
+			m_text.Draw(0, 720 - (32 * 6), 255, 255, 255, "SPACE:攻撃");
 
 			int score1 = GameData::s_score1;
 			for (int i = 0; i < 5; i++, score1 /= 10) {

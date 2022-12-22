@@ -34,29 +34,9 @@ void Player::Update() {
 		m_pos.y += move_speed;
 
 	//ƒ}ƒEƒX‚ÌƒxƒNƒgƒ‹
-	CVector2D vec = CInput::GetMousePoint() - m_pos;
+	//CVector2D vec = CInput::GetMousePoint() - m_pos;
 	//‰ñ“]’l‚ð‹tŽZ
-	m_ang = atan2(vec.x, vec.y);
-
-	//’e
-	if (HOLD(CInput::eMouseL)) {
-		if (m_cnt1 >= 120) {
-			//SOUND("SE_Hit01")->Play();
-			//if (m_pos.y > +100 || m_pos.y < 0 || m_pos.x < 0 || m_pos.x > +100) {
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(12), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(9), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(6), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(3), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-3), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-6), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-9), 4));
-			Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-12), 4));
-			//	SetKill();
-			//}
-			m_cnt1 = 0;
-		}
-	}
+	//m_ang = atan2(vec.x, vec.y);
 
 	//Boss‚ðŽæ“¾
 	Base* b = Base::FindObject(eType_EnemyBoss);
@@ -64,18 +44,33 @@ void Player::Update() {
 	if (b) {
 		CVector2D vec = b->m_pos - m_pos;
 		m_ang = atan2(vec.x, vec.y);
+		//’e
+		if (HOLD(CInput::eButton5)) {
+			if (m_cnt1 >= 120) {
+				//SOUND("SE_Hit01")->Play();
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(12), 3));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(9), 4));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(6), 5));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(3), 6));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 7));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-3), 6));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-6), 5));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-9), 4));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-12), 3));
+				m_cnt1 = 0;
+			}
+		}
+	}
+	//Boss‚ðŽæ“¾
+	//Base* b = Base::FindObject(eType_EnemyBoss);
+	//’eiBoss‚ª‚¢‚ê‚Îj
+	if (b) {
+		CVector2D vec = b->m_pos - m_pos;
+		m_ang = atan2(vec.x, vec.y);
 		if (HOLD(CInput::eButton5)) {
 			if (m_cnt >= 20) {
 				//SOUND("SE_Hit01")->Play();
-				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(20), 4));
-				//if (GameData::s_score1 <= 3000) {
-				//	Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(5), 4));
-				//}
-				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 4));
-				//if (GameData::s_score1 <= 3000) {
-				//	Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-5), 4));
-				//}
-				//Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(-20), 4));
+				Base::Add(new Bullet1(eType_Player_Attack, m_pos, m_ang + DtoR(0), 6));
 				m_cnt = 0;
 			}
 		}

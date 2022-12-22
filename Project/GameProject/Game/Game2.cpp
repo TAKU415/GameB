@@ -17,9 +17,9 @@ Game2::Game2(bool tuto) :Base(eType_Scene)
 	Base::Add(new Field());
 	Base::Add(new Player(CVector2D(640, 600)));
 	Base::Add(new EnemyBoss2(CVector2D(640, 100)));
-	Base::Add(new kuma(CVector2D(240, 130)));
+	//Base::Add(new kuma(CVector2D(240, 130)));
 	//Base::Add(new kuma(CVector2D(640, 360)));
-	Base::Add(new kuma(CVector2D(1040, 130)));
+	//Base::Add(new kuma(CVector2D(1040, 130)));
 
 	Base::Add(new EnemyMob2(CVector2D(1140, 0)));
 	//Base::Add(new EnemyMob2(CVector2D(1040, 10)));
@@ -42,15 +42,11 @@ void Game2::Update()
 	//ƒJƒEƒ“ƒg
 	m_cnt++;
 	if (m_cnt >= 450) {
-	//	Base::Add(new EnemyMob(CVector2D(1000, 200)));
-		Base::Add(new EnemyMob(CVector2D(640, 200)));
-	//	Base::Add(new EnemyMob(CVector2D(200, 200)));
+	//	Base::Add(new EnemyMob(CVector2D(1040, 200)));
+		Base::Add(new EnemyMob(CVector2D(640, 40)));
+	//	Base::Add(new EnemyMob(CVector2D(240, 200)));
 		m_cnt = 0;
 		//m_is_tuto = tuto;
-
-		//if (GameData::s_score <= 1800) {
-		//	Base::Add(new NPC(CVector2D(1180, 620)));
-		//}
 
 	}
 

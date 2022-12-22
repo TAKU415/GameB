@@ -16,7 +16,7 @@ Result::~Result() {
 }
 
 void Result::Update() {
-	//左クリックでタイトルへ
+	//SPACEでタイトルへ
 	if (PUSH(CInput::eMouseL)) {
 		GameData::s_score = 300;
 		GameData::s_score1 = 6000;

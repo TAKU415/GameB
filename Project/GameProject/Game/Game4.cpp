@@ -50,7 +50,7 @@ void Game4::Update()
 	m_cnt++;
 	if (m_cnt >= 150) {
 		//Base::Add(new EnemyMob(CVector2D(1080, 200)));
-		Base::Add(new EnemyMob(CVector2D(640, 200)));
+		Base::Add(new EnemyMob(CVector2D(640, 40)));
 		//Base::Add(new EnemyMob(CVector2D(200, 200)));
 		m_cnt = 0;
 		//m_is_tuto = tuto;

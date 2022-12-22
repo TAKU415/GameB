@@ -2,14 +2,14 @@
 #include "Bullet1.h"
 
 kuma::kuma(const CVector2D& pos) : Base(eType_kuma) {
-	//m_img.Load("Image/kuma.png");
+	m_img.Load("Image/kuma.png");
 	m_pos = pos;
 	//半径設定
 	m_rad = 16;
 	//表示サイズ
-	m_img.SetSize(50, 50);
+	m_img.SetSize(64, 64);
 	//画像の中心に設定
-	m_img.SetCenter(25, 25);
+	m_img.SetCenter(32, 32);
 }
 
 void kuma::Update() {
@@ -40,9 +40,9 @@ void kuma::Update() {
 
 
 void kuma::Draw() {
-	//m_img.SetPos(m_pos);
-	//m_img.SetAng(m_ang);
-	//m_img.Draw();
+	m_img.SetPos(m_pos);
+	m_img.SetAng(m_ang);
+	m_img.Draw();
 }
 
 void kuma::Collision(Base* b)
