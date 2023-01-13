@@ -17,7 +17,7 @@ Result::~Result() {
 
 void Result::Update() {
 	//SPACEでタイトルへ
-	if (PUSH(CInput::eMouseL)) {
+	if (PUSH(CInput::eButton5)) {
 		GameData::s_score = 300;
 		GameData::s_score1 = 6000;
 		//finish_game = 2;
@@ -38,7 +38,7 @@ void Result::Draw() {
 	if (GameData::s_score1 <= 0 && GameData::s_score > 0 && GameData::s_score < 300) {
 		m_img.Load("Image/Clear.png");
 	}
-	//分岐3　Perfect
+	//分岐3　PerfectClear
 	if (GameData::s_score1 <= 0 && GameData::s_score == 300) {
 		m_img.Load("Image/PerfectClear.png");
 	}

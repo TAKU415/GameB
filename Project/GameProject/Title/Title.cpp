@@ -15,8 +15,7 @@ m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 
 Title::~Title()
 {
-	//タイトル破棄時にゲームシーンへ移行
-	//Base::Add(new Game());
+	
 }
 
 void Title::Update()
@@ -58,5 +57,5 @@ void Title::Draw()
 	//召喚
 	m_img.Draw();
 	//文字表示
-	//m_title_text.Draw(780, 256, 255, 0, 0, "BARRAGE GAME(仮)");
+	//m_title_text.Draw(780, 256, 255, 0, 0, "文字");
 }
