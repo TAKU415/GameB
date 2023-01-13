@@ -3,15 +3,15 @@
 #include "GameData.h"
 
 EnemyBoss::EnemyBoss(const CVector2D& pos) : Base(eType_EnemyBoss) {
-	m_img.Load("Image/Boss2.png");
+	m_img.Load("Image/EBoss.png");
 	
 	m_pos = pos;
 	//半径設定
 	m_rad = 25;
 	//表示サイズ
-	m_img.SetSize(74, 74);
+	m_img.SetSize(44, 64);
 	//画像の中心に設定
-	m_img.SetCenter(37, 37);
+	m_img.SetCenter(22, 32);
 }
 
 void EnemyBoss::Update() {

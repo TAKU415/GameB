@@ -72,8 +72,8 @@ void Init(void)
 	ADD_RESOURCE("EnemyMob", CImage::CreateImage("Image/EnemyMob.png"));
 	ADD_RESOURCE("kuma", CImage::CreateImage("Image/kuma.png"));
 	//ボス（大敵）
-	ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/Boss.png"));
-	ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/Boss2.png"));
+	ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/EBoss.png"));
+	//ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/Boss2.png"));
 	//エフェクト
 	ADD_RESOURCE("Effect_Bomb", CImage::CreateImage("Image/Effect_Bomb.png"));
 	//弾（攻撃）
@@ -89,7 +89,7 @@ void Init(void)
 	ADD_RESOURCE("Result", CImage::CreateImage("Image/Result.png"));
 	ADD_RESOURCE("GameOver", CImage::CreateImage("Image/GameOver.png"));
 	ADD_RESOURCE("Clear", CImage::CreateImage("Image/Clear.png"));
-	ADD_RESOURCE("Perfect", CImage::CreateImage("Image/Perfect.png"));
+	ADD_RESOURCE("PerfectClear", CImage::CreateImage("Image/PerfectClear.png"));
 	//Game背景
 	ADD_RESOURCE("Field", CImage::CreateImage("Image/BackGround.png"));
 	//音

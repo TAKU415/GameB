@@ -42,9 +42,9 @@ void Game2::Update()
 	//ƒJƒEƒ“ƒg
 	m_cnt++;
 	if (m_cnt >= 450) {
-	//	Base::Add(new EnemyMob(CVector2D(1040, 200)));
-		Base::Add(new EnemyMob(CVector2D(640, 40)));
-	//	Base::Add(new EnemyMob(CVector2D(240, 200)));
+		Base::Add(new EnemyMob(CVector2D(1040, 200)));
+	//	Base::Add(new EnemyMob(CVector2D(640, 40)));
+		Base::Add(new EnemyMob(CVector2D(240, 200)));
 		m_cnt = 0;
 		//m_is_tuto = tuto;
 

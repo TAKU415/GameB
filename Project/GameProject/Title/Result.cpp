@@ -40,6 +40,6 @@ void Result::Draw() {
 	}
 	//•ªŠò3@Perfect
 	if (GameData::s_score1 <= 0 && GameData::s_score == 300) {
-		m_img.Load("Image/Perfect.png");
+		m_img.Load("Image/PerfectClear.png");
 	}
 }
