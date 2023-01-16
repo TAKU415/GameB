@@ -18,7 +18,7 @@ Game2::Game2(bool tuto) :Base(eType_Scene)
 	Base::Add(new Player(CVector2D(640, 600)));
 	Base::Add(new EnemyBoss2(CVector2D(640, 100)));
 	//Base::Add(new kuma(CVector2D(240, 130)));
-	//Base::Add(new kuma(CVector2D(640, 360)));
+	Base::Add(new kuma(CVector2D(640, 200)));
 	//Base::Add(new kuma(CVector2D(1040, 130)));
 
 	Base::Add(new EnemyMob2(CVector2D(1140, 0)));
@@ -50,18 +50,10 @@ void Game2::Update()
 
 	}
 
-	/*if (GameData::s_score >= 500) {
-		m_result_text.Draw(780, 256, 255, 255, 255, "Gameover");
-	}*/
-
 	if (GameData::s_score1 <= 0 || GameData::s_score <= 0) {
 		SetKill();
 	}
 
-	//プレイヤー死亡　ボタン１でゲームシーン終了
-	//if (!Base::FindObject(eType_Player) && PUSH(CInput::eButton1)) {
-		//m_kill = true;
-	//}
 }
 
 Game2::~Game2()

@@ -10,7 +10,7 @@ Result::Result(bool tuto) :Base(eType_Scene), m_result_text("C:\\Windows\\Fonts\
 int Result::finish_game = 0;
 
 Result::~Result() {
-	if (m_is_tuto/* || finish_game == 2 */ ) {
+	if (m_is_tuto /* || finish_game == 2 */ ) {
 		Base::Add(new Title());
 	}
 }

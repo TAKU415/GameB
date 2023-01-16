@@ -103,9 +103,6 @@ void Bullet1::Collision(Base* b) {
 			if (GameData::s_score1 <= 6000) {
 				GameData::s_score -= 100;
 			}
-			if (GameData::s_score1 <= 3000) {
-				GameData::s_score -= 300;
-			}
 		}
 
 		if (m_type == eType_Enemy_Attack && Base::CollisionCircle(this, b)) {
