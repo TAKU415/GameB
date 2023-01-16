@@ -18,12 +18,9 @@ Game4::Game4(bool tuto) :Base(eType_Scene)
 	Base::Add(new Field());
 
 	Base::Add(new Player(CVector2D(640, 600)));
-	//if (GameData::s_score <= 6000) {
-		Base::Add(new EnemyBoss(CVector2D(640, 100)));
-	//}
-	//if (GameData::s_score <= 3000) {
-		Base::Add(new EnemyBoss2(CVector2D(640, 100)));
-	//}
+
+	Base::Add(new EnemyBoss(CVector2D(640, 100)));
+	Base::Add(new EnemyBoss2(CVector2D(640, 100)));
 
 	Base::Add(new EnemyMob2(CVector2D(1140, 0)));
 	Base::Add(new EnemyMob2(CVector2D(1040, 0)));

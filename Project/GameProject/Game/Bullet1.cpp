@@ -125,7 +125,7 @@ void Bullet1::Collision(Base* b) {
 				GameData::s_score -= 50;
 			}
 			if (GameData::s_score1 <= 3000) {
-				GameData::s_score -= 10;
+				GameData::s_score -= 25;
 			}
 		}
 
