@@ -70,7 +70,7 @@ void Init(void)
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player.png"));
 	//小敵
 	ADD_RESOURCE("EnemyMob", CImage::CreateImage("Image/EnemyMob.png"));
-	ADD_RESOURCE("kuma", CImage::CreateImage("Image/kuma.png"));
+	ADD_RESOURCE("EBoss2", CImage::CreateImage("Image/EBoss2.png"));
 	//ボス（大敵）
 	ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/EBoss.png"));
 	//ADD_RESOURCE("EnemyBoss", CImage::CreateImage("Image/Boss2.png"));
