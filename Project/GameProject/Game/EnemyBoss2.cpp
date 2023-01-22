@@ -9,9 +9,9 @@ EnemyBoss2::EnemyBoss2(const CVector2D& pos) : Base(eType_EnemyBoss) {
 	//半径設定
 	m_rad = 36;
 	//表示サイズ
-	m_img.SetSize(66, 64);
+	m_img.SetSize(76, 76);
 	//画像の中心に設定
-	m_img.SetCenter(33, 32);
+	m_img.SetCenter(38, 38);
 }
 
 void EnemyBoss2::Update() {
